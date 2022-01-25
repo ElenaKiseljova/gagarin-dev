@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Document</title>
+    <title>Gagarin</title>
   </head>
-  <body class="white-bg">
+  <body>
     <div class="curtains">
   <div class="curtains__inner">
     <ul>
@@ -20,8 +21,8 @@
   </div>
 </div>
  <div class="header-wrapper">
-  <header class="header h_fix dark">
-    <nav class="nav dark">
+  <header class="header h_fix ">
+    <nav class="nav ">
       <ul>
         <li>
           <a href="products.html">товары</a>
@@ -36,7 +37,7 @@
           <button class="header__lang">Русский</button>
         </li>
       </ul>
-      <a href="index.html" class="header__logo dark">
+      <a href="index.html" class="header__logo ">
         <svg
           width="110"
           height="74"
@@ -106,302 +107,313 @@
     </nav>
   </header>
 </div>
- <section class="product-about">
-  <div class="product-about__slider">
-    <a href="index.html" class="btn-back">
-      <img src="img/arrow-back.svg" alt="" />
-      back to all
-    </a>
-    <div class="slider">
-      <div class="slider-for">
-        <div class="slider__item"><img src="img/image-1.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-4.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-5.png" alt="" /></div>
-      </div>
-      <div class="slider-nav">
-        <div class="slider__item"><img src="img/image-1.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-4.png" alt="" /></div>
-        <div class="slider__item"><img src="img/image-5.png" alt="" /></div>
-      </div>
-    </div>
-  </div>
-  <div class="product-about__center">
-    <div class="product-about__wrapp">
-      <h2 class="product-about__center-head">
-        Canon EOS 5D Mark IV body
 
-        <a href="#" title="title" class="title">
-          <img src="img/help.svg" alt="help"
-        /></a>
-      </h2>
+    <section class="intro intro--goods">
+      <div class="intro__inner">
+        <div class="intro__bottom-left">
+          <span>Video</span>
+          <span class="fill">photo</span>
+          <div class="intro__wrapp">
+            <span>go</span>
+            <span>pro </span>
+            <span>rental</span>
+          </div>
+          <div class="intro__wrapp intro__wrapp--last">
+            <span>sky </span>
+            <span>rental</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog">
+  <form class="catalog__form" method="POST">
+    <div class="filter">
+      <div class="filter__left">
+        <ul class="filter__left-box">
+          <li>
+            <a href="#" class="filter__btn filter__btn-action">все</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">фотоаппараты</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">объективы</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">синхронизаторы</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">карты памяти</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">аксессуары</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">вспышки</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">аккумуляторы и питание</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">софтбоксы и отражатели</a>
+          </li>
+          <li>
+            <a href="#" class="filter__btn">фото штативы и моноподы</a>
+          </li>
+        </ul>
+      </div>
+      <div class="filter__right">
+        <div class="filter__right-box">
+          <input
+            id="search"
+            type="text"
+            name="search"
+            placeholder="Поиск"
+            autocomplete="off"
+            class="filter__input"
+          />
+          <button type="submit" class="filter__btn-submit">
+            <img src="img/search.svg" alt="" class="filter__search-img" />
+          </button>
+        </div>
+        <button class="filter__btn-small">Фильтры</button>
+      </div>
     </div>
-    <div class="product-about__prices">
-      <span class="product-about__prices--work-day">960 uah / день </span>
-      <span class="product-about__prices--day-off"
-        >выходные: 1600 uah / день</span
+  </form>
+  <div class="catalog__box">
+    <span class="catalog__view-mode">view mode:</span>
+    <div class="catalog__btn-wrapper">
+      <button
+        data-class="products__grid"
+        class="btn__view-mode btn__view-mode--action"
       >
-    </div>
-    <p class="product-about__center-descr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cras tincidunt
-      viverra nec, ullamcorper. Eget senectus ac libero, sed aliquet neque
-      faucibus. Tortor elit scelerisque tellu integer donec turpis
-    </p>
-    <div class="product-about__center-counters">
-      <div class="buttons">
-        <button class="minus">
-          <svg
+        <svg
+          width="23"
+          height="14"
+          viewBox="0 0 23 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn__view-mode-inner"
+        >
+          <rect
+            x="18"
+            y="2"
+            width="18"
+            height="2"
+            transform="rotate(180 18 2)"
+          ></rect>
+          <rect
+            x="23"
+            y="8"
             width="10"
             height="2"
-            viewBox="0 0 10 2"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line y1="0.966797" x2="10" y2="0.966797" stroke="#0A0A0A" />
-          </svg>
-        </button>
-        <output>1</output>
-        <button class="plus">
-          <svg
-            width="10"
-            height="10"
-            viewBox="0 0 10 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              y1="4.97635"
-              x2="10"
-              y2="4.97635"
-              stroke="#0A0A0A"
-              stroke-width="0.714286"
-            />
-            <line
-              x1="5.02414"
-              y1="-1.56113e-08"
-              x2="5.02414"
-              y2="10"
-              stroke="#0A0A0A"
-              stroke-width="0.714286"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div class="btn-group black">
-        <a href="rent.html" class="btn btn-calendar-open"
-          ><span class="btn__brackets btn__brackets--left">(</span>
-          rent
-          <span class="btn__brackets btn__brackets--right">)</span></a
-        >
-      </div>
-    </div>
-    <div class="product-about__center-specifications">
-      <ul>
-        <li>
-          <span class="data">36 х 24 мм</span>
-          <span class="char">Размер матрицы</span>
-        </li>
-        <li>
-          <span class="data">Canon LC-E6E</span>
-          <span class="char">Зарядное устройство</span>
-        </li>
-        <li>
-          <span class="data">SD, SDHC, SDXC </span>
-          <span class="char">Карта памяти</span>
-        </li>
-        <li>
-          <span class="data">32000</span>
-          <span class="char">ISO</span>
-        </li>
-        <li>
-          <span class="data">30,4 Мп </span>
-          <span class="char">Способность матрицы</span>
-        </li>
-        <li>
-          <span class="data">USB-шнур</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="product-about__calendar">
-    <div class="calendar">
-      <button class="calendar__close">
-        <img src="img/close.svg" alt="close" />
+            transform="rotate(180 23 8)"
+          ></rect>
+          <rect
+            x="19"
+            y="14"
+            width="12"
+            height="2"
+            transform="rotate(180 19 14)"
+          ></rect>
+        </svg>
       </button>
-      <div class="calendar__wrapper">
-        <div class="calendar__top">
-          <button class="calendar__btn">
-            <svg
-              width="11"
-              height="19"
-              viewBox="0 0 11 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.1329 17.3066L1.14423 8.31793L0.245369 9.21679L9.23401 18.2054L10.1329 17.3066Z"
-                fill="black"
-              />
-              <path
-                d="M1.14423 10.1157L10.1255 1.11964L9.2259 0.221513L0.245369 9.21679L1.14423 10.1157Z"
-                fill="black"
-              />
-            </svg>
-          </button>
-          <span class="calendar__month">февраль</span>
-          <button class="calendar__btn">
-            <svg
-              width="11"
-              height="19"
-              viewBox="0 0 11 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.78509 17.3066L9.77374 8.31793L10.6726 9.21679L1.68395 18.2054L0.78509 17.3066Z"
-                fill="black"
-              />
-              <path
-                d="M9.77374 10.1157L0.79247 1.11964L1.69207 0.221513L10.6726 9.21679L9.77374 10.1157Z"
-                fill="black"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="calendar__center">
-          <ul class="calendar__list">
-            <li class="calendar__item passed">26</li>
-            <li class="calendar__item passed">27</li>
-            <li class="calendar__item passed">28</li>
-            <li class="calendar__item passed">29</li>
-            <li class="calendar__item passed">30</li>
-            <li class="calendar__item passed">31</li>
-            <li class="calendar__item passed">01</li>
-            <li class="calendar__item passed">02</li>
-            <li class="calendar__item passed">03</li>
-            <li class="calendar__item passed">04</li>
-            <li class="calendar__item passed">05</li>
-            <li class="calendar__item passed">06</li>
-            <li class="calendar__item passed">07</li>
-            <li class="calendar__item passed">08</li>
-            <li class="calendar__item passed">09</li>
-            <li class="calendar__item passed">10</li>
-            <li class="calendar__item passed">11</li>
-            <li class="calendar__item current">12</li>
-            <li class="calendar__item">13</li>
-            <li class="calendar__item">14</li>
-            <li class="calendar__item">15</li>
-            <li class="calendar__item">16</li>
-            <li class="calendar__item">17</li>
-            <li class="calendar__item">18</li>
-            <li class="calendar__item">19</li>
-            <li class="calendar__item plan">20</li>
-            <li class="calendar__item">21</li>
-            <li class="calendar__item">22</li>
-            <li class="calendar__item">23</li>
-            <li class="calendar__item">24</li>
-            <li class="calendar__item">25</li>
-            <li class="calendar__item">26</li>
-            <li class="calendar__item">27</li>
-            <li class="calendar__item">28</li>
-            <li class="calendar__item">01</li>
-          </ul>
-        </div>
-        <div class="calendar__bottom">
-          <div class="calendar__time">
-            <span class="calendar__time-head">12 февраля</span>
-            <div class="select">
-              <span class="select__selected">10:00</span>
-              <ul class="select__dropdown">
-                <li>11:00</li>
-                <li>12:00</li>
-                <li>13:00</li>
-                <li>14:00</li>
-              </ul>
-            </div>
-          </div>
-          <div class="calendar__time">
-            <span class="calendar__time-head">20 февраля</span>
-            <div class="select">
-              <span class="select__selected">10:00</span>
-              <ul class="select__dropdown">
-                <li>11:00</li>
-                <li>12:00</li>
-                <li>13:00</li>
-                <li>14:00</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <a href="#" class="btn"
-        ><span class="btn__brackets btn__brackets--left">(</span>
-        rent
-        <span class="btn__brackets btn__brackets--right">)</span></a
-      >
+      <button data-class="products__grid row" class="btn__view-mode">
+        <svg
+          width="18"
+          height="14"
+          viewBox="0 0 18 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn__view-mode-inner"
+        >
+          <rect
+            x="18"
+            y="8"
+            width="18"
+            height="2"
+            transform="rotate(180 18 8)"
+          ></rect>
+          <rect
+            x="18"
+            y="14"
+            width="18"
+            height="2"
+            transform="rotate(180 18 14)"
+          ></rect>
+          <rect
+            x="18"
+            y="2"
+            width="18"
+            height="2"
+            transform="rotate(180 18 2)"
+          ></rect>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
-
-    <section class="product-description">
-  <div class="product-description__left">
-    <h1 class="product-description__title">Canon EOS 5D Mark IV body</h1>
-  </div>
-  <div class="product-description__right">
-    <p>
-      Производительность в условиях слабого освещения была улучшена для всего
-      диапазона значений ISO одновременно со значительным уменьшением уровня
-      цифрового шума. Также максимальное значение ISO было увеличено до ISO
-      32000 (с возможностью расширения до ISO 102400). Вы можете быть уверены в
-      превосходном качестве изображений даже в условиях плохого освещения.
-      Встроенная функция коррекции аберрации объектива улучшает его рабочие
-      характеристики, компенсируя такие факторы
-    </p>
-    <p>
-      Производительность в условиях слабого освещения была улучшена для всего
-      диапазона значений ISO одновременно со значительным уменьшением уровня
-      цифрового шума. Также максимальное значение ISO было увеличено до ISO
-      32000 (с возможностью расширения до ISO 102400). Вы можете быть уверены в
-      превосходном качестве изображений даже в условиях плохого освещения.
-      Встроенная функция коррекции аберрации объектива улучшает его рабочие
-      характеристики, компенсируя такие факторы, как дифракция, искажения и
-      хроматическая аберрация, что позволяет заметно повысить качество
-      изображений. Функция Digital Lens Optimizer расширяет возможности
-      коррекции, компенсируя еще больше оптических искажений, включая эффект от
-      оптического фильтра нижних частот камеры. Результат — оптимальная
-      производительность и невероятное качество изображения
-    </p>
-  </div>
-</section>
-
-    <section class="populars">
-  <div class="populars__grid">
+ <section class="products">
+  <div class="products__grid">
     <a href="product.html" class="products__item">
       <div class="products__item-image">
         <img src="img/image-1.png" alt="image" />
       </div>
       <span class="products__item-name">Canon EOS 5D Mark IV body</span>
     </a>
-    <a href="product.html" class="products__item">
+    <a href="#" class="products__item">
       <div class="products__item-image">
         <img src="img/image-2.png" alt="image" />
       </div>
       <span class="products__item-name">Canon EOS 5D Mark IV body</span>
     </a>
-    <a href="product.html" class="products__item">
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-2-big.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
       <div class="products__item-image">
         <img src="img/image-3.png" alt="image" />
       </div>
       <span class="products__item-name">Canon EOS 5D Mark IV body</span>
     </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-4.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-5.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-2.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-3.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-4.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
   </div>
+  <div class="products__grid">
+    <a href="product.html" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-2.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-2-big.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-3.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-4.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-5.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-2.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-3.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-4.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+    <a href="#" class="products__item">
+      <div class="products__item-image">
+        <img src="img/image-1.png" alt="image" />
+      </div>
+      <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+    </a>
+  </div>
+  <div class="btn-group">
+  <a href="#" class="btn"
+    ><span class="btn__brackets btn__brackets--left">(</span>
+    view more
+    <span class="btn__brackets btn__brackets--right">)</span></a
+  >
+</div>
+
 </section>
- <footer class="footer dark">
+
+    <footer class="footer ">
   <div class="social">
     <ul class="social__list">
       <div class="social__block social__block-left">
@@ -473,7 +485,8 @@
     </ul>
   </div>
 </footer>
- <div class="basket">
+
+    <div class="basket">
   <div class="basket__wrapper">
     <div class="basket__top">
       <div class="basket__top-left">
@@ -652,6 +665,7 @@
     ></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/DrawSVGPlugin.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
   </body>

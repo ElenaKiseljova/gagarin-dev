@@ -18,6 +18,7 @@ $(".slider-nav").slick({
 /* Basket*/
 
 const basketBtn = document.querySelector(".basket-btn");
+
 const basket = document.querySelector(".basket");
 const basketBtnClose = document.querySelector(".btn-close");
 const btnCalendarOpen = document.querySelector(".btn-calendar-open");
@@ -29,12 +30,11 @@ function foo() {
   basket.classList.toggle("active");
 }
 basketBtn.addEventListener("click", (event) => {
-  event.preventDefault();
   foo();
   animateOpacity(".basket__center", ".basket__center  a");
 });
 basketBtnClose.addEventListener("click", foo);
-btnCalendarOpen.addEventListener("click", (evt) => {
+/* btnCalendarOpen.addEventListener("click", (evt) => {
   evt.preventDefault();
   calendar.classList.add("active");
   document.body.classList.add("active");
@@ -43,3 +43,4 @@ calendarClose.addEventListener("click", () => {
   calendar.classList.remove("active");
   document.body.classList.remove("active");
 });
+ */

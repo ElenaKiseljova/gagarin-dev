@@ -27,6 +27,7 @@ const animateLinkOnHover = () => {
   const allLinks = document.querySelectorAll(
     ".social__item, .nav__link, .contacts__link"
   );
+	
   allLinks.forEach((link) => {
     link.setAttribute("data-hover", link.textContent);
   });
@@ -215,6 +216,8 @@ const resetParallax = ($event)=> {
 	gsap.to(el.children, { x: 0, y: 0 })
 }
 
+
+animateLinkOnHover();
 
 /* Home */
 
