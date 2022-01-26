@@ -8,6 +8,7 @@ inpust.forEach((item) => {
   item.addEventListener("blur", () => {
     if (!item.value.trim()) {
       item.nextElementSibling.classList.remove("active");
+      item.value = "";
     } else return;
   });
 });

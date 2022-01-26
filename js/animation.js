@@ -234,6 +234,7 @@ animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
 animateFadeOutBottom(".about__list", ".about__list *");
 animateFadeOutBottom(".basket", ".btn-show");
 /* Product */
+animateFadeOutBottom(".product-about__center", ".product-about__wrapp h2");
 animateFadeOutBottom(".product-about__center", ".product-about__center > *");
 animateFadeOutBottom(".slider-nav ", ".slider-nav .slider__item");
 animateFadeOutBottom(".calendar ", ".calendar__wrapper > *");
@@ -242,8 +243,8 @@ animateFadeOutBottom(".product-description ", ".product-description > *");
 /* Privacy */
 animateFadeOutBottom(".privacy__inner", ".privacy__inner h1");
 animateFadeOutBottom(".privacy__inner", ".privacy__inner p");
-animateFadeOutBottom(".privacy__list", ".privacy__item > *");
-
+animateFadeOutBottom(".privacy__item", ".privacy__item > *");
+animateFadeOutBottom(".basket__center", ".basket__center > *");
 /* For Circles */
 const items = document.querySelectorAll(".statistics__item-wrapper");
 items.forEach((item) => {
