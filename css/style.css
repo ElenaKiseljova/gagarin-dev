@@ -597,6 +597,10 @@ body.clear-bg::before {
   color: #000;
 }
 
+.nav.dark .basket-btn {
+  color: #000;
+}
+
 .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1555,6 +1559,7 @@ body.clear-bg::before {
 
 .social__item:hover::before {
   max-width: 100%;
+  width: 100%;
 }
 
 .social__item::before {
@@ -2601,7 +2606,8 @@ body.clear-bg::before {
   }
 
   .nav ul li a,
-  .nav ul li.hide {
+  .nav ul li.hide,
+  .nav ul li button {
     font-size: 14px;
   }
 
@@ -3634,6 +3640,10 @@ body.clear-bg::before {
     padding: 120px 16px 0 16px;
   }
 
+  .intro.intro--goods .intro__bottom-left span {
+    font-size: 56px;
+  }
+
   .intro__top-left {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -3721,6 +3731,7 @@ body.clear-bg::before {
 
   .filter__btn {
     white-space: nowrap;
+    font-size: 14px;
   }
 
   .filter__btn-small {
@@ -3729,6 +3740,10 @@ body.clear-bg::before {
 
   .filter__input {
     font-size: 12px;
+  }
+
+  .filter__input:focus {
+    width: 200px;
   }
 
   .filter__right {
@@ -4057,6 +4072,16 @@ body.clear-bg::before {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-top: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .intro.intro--goods .intro__bottom-left {
+    max-width: 335px;
+  }
+
+  .intro.intro--goods .intro__bottom-left span {
+    font-size: 24px;
   }
 }
 
