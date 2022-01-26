@@ -4,5 +4,9 @@ filterBtns.forEach((item) => {
     evt.preventDefault();
     filterBtns.forEach((item) => item.classList.remove("filter__btn-action"));
     item.classList.add("filter__btn-action");
+
+    if (typeof window.additional !== 'undefined') {
+      window.additional.filters(item);
+    }
   });
 });
