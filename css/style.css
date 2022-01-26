@@ -961,7 +961,6 @@ body.clear-bg::before {
   line-height: 18px;
   text-transform: uppercase;
   color: #fff;
-  opacity: 0.5;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -2082,7 +2081,6 @@ body.clear-bg::before {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-y: auto;
   top: 0;
   right: 0;
   width: 100%;
@@ -2105,6 +2103,7 @@ body.clear-bg::before {
 }
 
 .basket__wrapper {
+  height: 100vh;
   max-width: 375px;
   margin-right: 0;
   margin-left: auto;
@@ -2172,6 +2171,7 @@ body.clear-bg::before {
 }
 
 .basket__center {
+  overflow-y: scroll;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2223,6 +2223,10 @@ body.clear-bg::before {
   color: #0a0a0a;
   margin-left: 0;
   margin-right: auto;
+}
+
+.basket__center::-webkit-scrollbar {
+  display: none;
 }
 
 .basket__bottom {
@@ -2436,6 +2440,7 @@ body.clear-bg::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
 }
 
 .fix-nav__block.-block-3 {
@@ -2443,7 +2448,7 @@ body.clear-bg::before {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-top: -65px;
+  margin-top: 10px;
 }
 
 .fix-nav__block.-block-3 .fix-nav__links {

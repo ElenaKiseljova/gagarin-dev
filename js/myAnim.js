@@ -11,7 +11,7 @@ animateFadeOutBottom(".btn-group", ".btn");
 animateFadeOutBottom(".about__content", ".about__content p");
 animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
 animateFadeOutBottom(".about__list", ".about__list *");
-
+animateFadeOutBottom(".basket", ".btn-show");
 /* Product */
 animateFadeOutBottom(".product-about__center", ".product-about__center > *");
 animateFadeOutBottom(".slider-nav ", ".slider-nav .slider__item");
