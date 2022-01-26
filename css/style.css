@@ -425,6 +425,7 @@ body::before {
 
 body.white-bg {
   background-color: #eaeaea;
+  height: 100vh;
 }
 
 body.white-bg::before {
@@ -647,11 +648,12 @@ body.clear-bg::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(91.64%, rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0) 91.64%);
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 91.64%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #000000), color-stop(91.64%, rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(bottom, #000000 10%, rgba(0, 0, 0, 0) 91.64%);
+  background: linear-gradient(0deg, #000000 10%, rgba(0, 0, 0, 0) 91.64%);
   width: 100%;
   height: 100vh;
+  min-height: 300px;
   z-index: -1;
 }
 
@@ -2492,6 +2494,60 @@ body.clear-bg::before {
   display: none;
 }
 
+.shop__bag {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 84px;
+  height: 84px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: #000;
+  bottom: 20px;
+  right: 24px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 100;
+  color: #000;
+}
+
+.shop__icon {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/bag.svg") no-repeat center center;
+}
+
+.shop__count {
+  position: relative;
+  top: 4px;
+}
+
 /* Libs scss */
 
 /* Slider */
@@ -3250,6 +3306,17 @@ body.clear-bg::before {
 
   .privacy__item:not(:last-child) {
     margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .shop__bag {
+    width: 70px;
+    height: 70px;
+  }
+
+  .shop__count {
+    font-size: 13px;
   }
 }
 
@@ -4085,6 +4152,27 @@ body.clear-bg::before {
   }
 }
 
+@media (max-width: 480px) {
+  .shop__bag {
+    width: 50px;
+    height: 50px;
+  }
+
+  .shop__icon {
+    background-size: 20px;
+  }
+
+  .shop__count {
+    display: none;
+  }
+}
+
+@media (hover: hover) and (max-width: 480px) {
+  .shop__bag:hover .shop__icon {
+    background-size: 20px;
+  }
+}
+
 @media (max-width: 374px) {
   .intor__bottom-left {
     max-width: 100%;
@@ -4102,5 +4190,15 @@ body.clear-bg::before {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
+  }
+
+  .shop__bag:hover {
+    background-color: #eaeaea;
+  }
+
+  .shop__bag:hover .shop__icon {
+    width: 100%;
+    height: 100%;
+    background: url("../img/basket-icon.svg") no-repeat center center;
   }
 }
