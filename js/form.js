@@ -1,4 +1,5 @@
 const form = document.querySelector(".message__form");
+
 if (form) {
   const inpust = form.querySelectorAll(".message__input");
   inpust.forEach((item) => {
@@ -14,8 +15,12 @@ if (form) {
     });
   });
 
-  if (typeof window.additional !== 'undefined') {
-    window.additional.forms(form);
-  }
+  form.addEventListener("submit", (evt) => {
+    evt.preventDefault();
+
+    if (typeof window.additional !== 'undefined') {
+      window.additional.forms(form);
+    }
+  })
 }
 
