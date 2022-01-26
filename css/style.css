@@ -1081,7 +1081,7 @@ body.clear-bg::before {
   grid-row: 6/7;
 }
 
-.products__item:last-child {
+.products__item:nth-child(12) {
   grid-row: 6/-1;
   grid-column: 4/-1;
 }
