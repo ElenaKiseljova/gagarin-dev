@@ -11206,7 +11206,6 @@ buttons.forEach((item) => {
   return jQuery;
 });
 
-
 !(function (i) {
   "use strict";
   "function" == typeof define && define.amd
@@ -13367,7 +13366,7 @@ const resetParallax = ($event)=> {
 }
 
 
-animateLinkOnHover();
+
 
 /* Home */
 

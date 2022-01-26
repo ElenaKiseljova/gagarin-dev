@@ -217,7 +217,7 @@ const resetParallax = ($event)=> {
 }
 
 
-animateLinkOnHover();
+
 
 /* Home */
 
