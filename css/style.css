@@ -1430,7 +1430,7 @@ body.clear-bg::before {
   width: 100%;
 }
 
-.message__form.dark .input__wrapp span {
+.message__form.dark .input__wrapp span:not(.input-placeholder-error) {
   color: #000;
 }
 
@@ -1440,6 +1440,10 @@ body.clear-bg::before {
 
 .message__form.dark button {
   color: #000;
+}
+
+.message__form.dark .input__wrapp.error input {
+  border-bottom: 1px solid #ff4949;
 }
 
 .form {
@@ -1461,6 +1465,14 @@ body.clear-bg::before {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40%;
           flex: 1 1 40%;
+}
+
+.input__wrapp.error span.input-placeholder-error {
+  opacity: 1;
+}
+
+.input__wrapp.error input {
+  border-bottom: 1px solid #ff4949;
 }
 
 .input__wrapp span {
@@ -1485,6 +1497,17 @@ body.clear-bg::before {
           transform: translateY(-25px);
   font-size: 10px;
   opacity: 0.5;
+}
+
+.input__wrapp span.input-placeholder-error {
+  -webkit-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+  opacity: 0;
+  color: #ff4949;
+  right: 0;
+  font-size: 12px;
+  left: initial;
 }
 
 .input__wrapp:last-of-type {
