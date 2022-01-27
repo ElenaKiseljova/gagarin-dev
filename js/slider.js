@@ -14,8 +14,3 @@ $(".slider-nav").slick({
   centerMode: false,
   focusOnSelect: true,
 });
-
-/* Basket*/
-
-const calendar = document.querySelector(".product-about__calendar");
-const calendarClose = document.querySelector(".calendar__close");

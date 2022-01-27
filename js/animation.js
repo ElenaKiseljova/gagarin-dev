@@ -27,7 +27,7 @@ const animateLinkOnHover = () => {
   const allLinks = document.querySelectorAll(
     ".social__item, .nav__link, .contacts__link"
   );
-	
+
   allLinks.forEach((link) => {
     link.setAttribute("data-hover", link.textContent);
   });
@@ -191,67 +191,25 @@ const animateLogo = (el) => {
   });
 };
 
-const parallax = ($event)=> {
-	
-	const wrapper = $event.currentTarget
-	const el = Array.from(wrapper.children).find((el) => el)
+const parallax = ($event) => {
+  const wrapper = $event.currentTarget;
+  const el = Array.from(wrapper.children).find((el) => el);
 
-	const e = $event
+  const e = $event;
 
-	const mouseX = e.pageX - wrapper.offsetLeft
-	const mouseY = e.pageY - wrapper.offsetTop
+  const mouseX = e.pageX - wrapper.offsetLeft;
+  const mouseY = e.pageY - wrapper.offsetTop;
 
-	const percX =
-		((mouseX - wrapper.offsetWidth) / 2 / wrapper.offsetWidth) * 50
-	const percY =
-		((mouseY - wrapper.offsetHeight) / 2 / wrapper.offsetHeight) * 30
+  const percX = ((mouseX - wrapper.offsetWidth) / 2 / wrapper.offsetWidth) * 50;
+  const percY =
+    ((mouseY - wrapper.offsetHeight) / 2 / wrapper.offsetHeight) * 30;
 
-	gsap.to(el, { x: percX, y: percY, scale: 0.9 })
-	gsap.to(el.children, { x: percX, y: percY })
-}
-const resetParallax = ($event)=> {
-	const wrapper = $event.currentTarget
-	const el = Array.from(wrapper.children).find((el) => el)
-	gsap.to(el, { x: 0, y: 0, scale: 1 })
-	gsap.to(el.children, { x: 0, y: 0 })
-}
-
-
-
-
-/* Home */
-
-animateFadeOutBottom(".intro__inner", ".intro__inner *");
-animateFadeOutBottom(".products__grid", ".products__item");
-animateFadeOutBottom(".filter__left-box", ".filter__left-box li ");
-animateFadeOutBottom(".about__title", ".about__title span");
-animateFadeOutBottom(".list", ".list__item");
-animateOpacity(".statistics__box", ".statistics__item-wrapper");
-animateFadeOutBottom(".message__form", ".input__wrapp");
-animateFadeOutBottom(".btn-group", ".btn");
-animateFadeOutBottom(".about__content", ".about__content p");
-animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
-animateFadeOutBottom(".about__list", ".about__list *");
-animateFadeOutBottom(".basket", ".btn-show");
-/* Product */
-animateFadeOutBottom(".product-about__center", ".product-about__wrapp h2");
-animateFadeOutBottom(".product-about__center", ".product-about__center > *");
-animateFadeOutBottom(".slider-nav ", ".slider-nav .slider__item");
-animateFadeOutBottom(".calendar ", ".calendar__wrapper > *");
-animateFadeOutBottom(".product-description ", ".product-description > *");
-
-/* Privacy */
-animateFadeOutBottom(".privacy__inner", ".privacy__inner h1");
-animateFadeOutBottom(".privacy__inner", ".privacy__inner p");
-animateFadeOutBottom(".privacy__item", ".privacy__item > *");
-animateFadeOutBottom(".basket__center", ".basket__center > *");
-/* For Circles */
-const items = document.querySelectorAll(".statistics__item-wrapper");
-items.forEach((item) => {
-  item.addEventListener("mousemove", (event) => {
-    parallax(event);
-  });
-  item.addEventListener("mouseleave", (event) => {
-    resetParallax(event);
-  });
-});
+  gsap.to(el, { x: percX, y: percY, scale: 0.9 });
+  gsap.to(el.children, { x: percX, y: percY });
+};
+const resetParallax = ($event) => {
+  const wrapper = $event.currentTarget;
+  const el = Array.from(wrapper.children).find((el) => el);
+  gsap.to(el, { x: 0, y: 0, scale: 1 });
+  gsap.to(el.children, { x: 0, y: 0 });
+};
