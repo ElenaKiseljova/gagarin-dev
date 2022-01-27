@@ -18,9 +18,8 @@ if (form) {
   form.addEventListener("submit", (evt) => {
     evt.preventDefault();
 
-    if (typeof window.additional !== 'undefined') {
+    if (typeof window.additional !== "undefined") {
       window.additional.forms(form);
     }
-  })
+  });
 }
-

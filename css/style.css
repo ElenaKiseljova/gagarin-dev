@@ -577,9 +577,9 @@ body.clear-bg::before {
   text-transform: uppercase;
   cursor: pointer;
   pointer-events: visible;
-  font-family: "Mont-Regular", sans-serif;
+  font-family: "Mont", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 15px;
   color: #000;
 }
@@ -614,7 +614,9 @@ body.clear-bg::before {
 
 .nav ul li a,
 .nav ul li.hide {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
   font-family: "Mont", sans-serif;
   font-weight: 400;
@@ -2107,8 +2109,13 @@ body.clear-bg::before {
 
 .basket {
   z-index: 1000;
-  display: none;
-  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  position: fixed;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   top: 0;
@@ -2130,7 +2137,14 @@ body.clear-bg::before {
 }
 
 .basket.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.basket.active .basket__wrapper {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .basket__wrapper {
@@ -2145,7 +2159,13 @@ body.clear-bg::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.7s linear;
+  -o-transition: 0.7s linear;
+  transition: 0.7s linear;
   background-color: #eaeaea;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .basket__top {
@@ -3378,7 +3398,9 @@ body.clear-bg::before {
 
   .nav ul li.hide {
     font-size: 12px;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .intro__top-left {
