@@ -520,6 +520,7 @@ body.clear-bg::before {
 }
 
 .header__logo {
+  z-index: 100;
   position: absolute;
   top: 12px;
   left: 50%;
@@ -934,6 +935,7 @@ body.clear-bg::before {
 
 .filter__btn-action {
   opacity: 1;
+  pointer-events: none;
 }
 
 .filter__btn-submit {
@@ -1250,6 +1252,7 @@ body.clear-bg::before {
 
 .btn__view-mode--action {
   fill: #fff;
+  pointer-events: none;
 }
 
 .btn__view-mode-inner {
