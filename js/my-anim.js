@@ -15,7 +15,7 @@ animateFadeOutBottom(".basket", ".btn-show");
 /* Product */
 animateFadeOutBottom(".product-about__center", ".product-about__wrapp h2");
 animateFadeOutBottom(".product-about__center", ".product-about__center > *");
-animateFadeOutBottom(".slider-nav ", ".slider-nav .slider__item");
+animateFadeOutBottom(".product-about__slider", ".slider");
 animateFadeOutBottom(".calendar ", ".calendar__wrapper > *");
 animateFadeOutBottom(".product-description ", ".product-description > *");
 
