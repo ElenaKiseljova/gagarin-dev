@@ -12,11 +12,6 @@ const validate = {
     const pattern = /^[\p{L} ]+$/gu;
     return !!pattern.test(value);
   },
-  alidatePhone(value) {
-    const pattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,15}(\s*)?$/;
-
-    return !!pattern.test(value);
-  },
   validatePhone(value) {
     const pattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,15}(\s*)?$/;
 
@@ -47,8 +42,8 @@ if (form) {
   });
 
   const name = form.querySelector('input[name="name"]');
-  const email = form.querySelector('input[name="email"]');
-  const tel = form.querySelector('input[name="tel"]');
+  const email = form.querySelector('input[type="email"]');
+  const tel = form.querySelector('input[type="tel"]');
 
   name.addEventListener("input", () => {
     if (validate.validateName(name.value)) {
