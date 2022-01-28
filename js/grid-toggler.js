@@ -19,6 +19,5 @@ buttons.forEach((item) => {
       item.className = key.dataset.class;
     });
     item.classList.add("btn__view-mode--action");
-    console.log(window.viewMode);
   });
 });

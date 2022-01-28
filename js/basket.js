@@ -5,6 +5,8 @@ const basketBtnClose = document.querySelector(".btn-close");
 const btnCalendarOpen = document.querySelector(".btn-calendar-open");
 const mobileNav = document.querySelector(".fix-nav");
 const basketWrapper = document.querySelector(".basket__wrapper");
+//Получим высоту footer'а
+const footer = document.querySelector(".footer").offsetHeight;
 
 /* Ф-ция открытия и закрытия корзины */
 const toggleClassActive = () => {
@@ -30,3 +32,22 @@ basket.addEventListener("click", (event) => {
     document.body.classList.remove("active");
   } else return;
 });
+//получив высоту дока
+/* let dokHeight = document.body.offsetHeight;
+window.addEventListener("scroll", () => {
+  let a = window.pageYOffset - footer;
+  let posTop =
+    window.pageYOffset !== undefined
+      ? window.pageYOffset
+      : (document.documentElement || document.body.parentNode || document.body)
+          .scrollTop;
+  console.log(", y=" + posTop);
+  if (posTop > a) {
+    document.querySelector(
+      ".shop__bag"
+    ).style.transform = `translateY(${-footer}px)`;
+  } else {
+    document.querySelector(".shop__bag").style.transform = `translateY(0)`;
+  }
+});
+ */

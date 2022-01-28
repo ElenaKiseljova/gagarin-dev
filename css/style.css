@@ -535,6 +535,11 @@ body.clear-bg::before {
   fill: #000;
 }
 
+.header__logo img {
+  width: 134px;
+  height: 100%;
+}
+
 .header__lang {
   padding: 0;
   text-transform: uppercase;
@@ -644,7 +649,7 @@ body.clear-bg::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   position: relative;
   position: relative;
 }
@@ -1302,7 +1307,6 @@ body.clear-bg::before {
 .btn-back {
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
@@ -1316,6 +1320,11 @@ body.clear-bg::before {
 
 .btn-back img {
   margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+.btn:hover {
+  opacity: 0.5 !important;
 }
 
 .list {
@@ -1714,10 +1723,18 @@ body.clear-bg::before {
 }
 
 .product-about__center-descr {
+  margin-bottom: 68px;
+}
+
+.product-about__center-descr p {
+  font-weight: 300;
   font-size: 16px;
   line-height: 20px;
   text-align: justify;
-  margin-bottom: 68px;
+}
+
+.product-about__center-descr > p + p {
+  margin-top: 10px;
 }
 
 .product-about__center-counters {
@@ -2969,10 +2986,13 @@ body.clear-bg::before {
   }
 
   .product-about__center-descr {
+    margin-bottom: 48px;
+  }
+
+  .product-about__center-descr p {
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
-    margin-bottom: 48px;
   }
 
   .product-about__center-counters {
@@ -3015,7 +3035,7 @@ body.clear-bg::before {
   }
 
   .slider {
-    max-width: 350px;
+    /* max-width: 350px; */
     margin-right: 0;
     padding-left: 70px;
   }
@@ -3356,9 +3376,12 @@ body.clear-bg::before {
   }
 
   .product-about__center-descr {
+    margin-bottom: 40px;
+  }
+
+  .product-about__center-descr p {
     font-size: 12px;
     line-height: 15px;
-    margin-bottom: 40px;
   }
 
   .product-about__center-counters {
@@ -3798,6 +3821,9 @@ body.clear-bg::before {
   .product-about__center-descr {
     max-width: 474px;
     margin: 0 auto 40px auto;
+  }
+
+  .product-about__center-descr p {
     text-align: center;
   }
 
