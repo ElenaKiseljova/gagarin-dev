@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -1036,13 +1034,9 @@ body.clear-bg::before {
 .products__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 450px);
+  grid-auto-rows: 450px;
   grid-gap: 24px;
   /* margin-bottom: 64px; */
-}
-
-.products__grid.row {
-  grid-template-rows: repeat(3, 450px);
 }
 
 .products__grid.row > * {
@@ -1131,8 +1125,8 @@ body.clear-bg::before {
 }
 
 .products__item:nth-child(12) {
-  grid-row: 6/-1;
-  grid-column: 4/-1;
+  grid-row: 6/7;
+  grid-column: 4/5;
 }
 
 .about {
@@ -1448,7 +1442,7 @@ body.clear-bg::before {
 }
 
 .equipment-rental.dark {
-  margin: 200px 0;
+  margin: 76px 0;
 }
 
 .equipment-rental.dark .equipment-rental__title span {
@@ -1574,6 +1568,15 @@ body.clear-bg::before {
   color: #000;
 }
 
+.footer.dark .social__item:not(.social__item--without-border--white)::before {
+  border-color: #000;
+  color: #000;
+}
+
+.footer.dark .social__item.social__item--without-border--white::before {
+  border-color: #000;
+}
+
 .social {
   margin-top: auto;
   padding: 0 24px;
@@ -1676,7 +1679,7 @@ body.clear-bg::before {
 .product-about {
   padding: 0 24px;
   margin-top: 126px;
-  margin-bottom: 177px;
+  margin-bottom: 144px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -2125,6 +2128,12 @@ body.clear-bg::before {
   margin-top: 24px;
 }
 
+.main {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .populars {
   padding: 0 24px;
   margin-bottom: 133px;
@@ -2343,7 +2352,7 @@ body.clear-bg::before {
 }
 
 .privacy__title {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   font-family: "Mont", sans-serif;
   line-height: 74px;
   font-weight: 600;
@@ -2360,7 +2369,7 @@ body.clear-bg::before {
   font-size: 16px;
   line-height: 18px;
   color: #fff;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .privacy__list {
@@ -2899,10 +2908,6 @@ body.clear-bg::before {
     padding: 0 20px;
   }
 
-  .equipment-rental.dark {
-    margin: 150px 0;
-  }
-
   .equipment-rental__left {
     max-width: 619px;
     margin-right: 20px;
@@ -3003,6 +3008,12 @@ body.clear-bg::before {
     line-height: 18px;
   }
 
+  .product-about__calendar {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 350px;
+            flex: 0 1 350px;
+  }
+
   .slider {
     max-width: 350px;
     margin-right: 0;
@@ -3084,15 +3095,16 @@ body.clear-bg::before {
 
   .populars {
     padding: 0 20px;
+    margin-bottom: 110px;
   }
 
   .populars__grid {
     grid-template-rows: auto;
-    grid-gap: 20px;
   }
 
   .privacy__title {
     font-weight: 600;
+    margin-bottom: 40px;
     font-size: 74px;
     line-height: 100%;
   }
@@ -3165,12 +3177,12 @@ body.clear-bg::before {
   }
 
   .products__grid {
-    grid-template-rows: repeat(6, 300px);
+    grid-auto-rows: 300px;
     grid-gap: 24px;
   }
 
   .products__grid.row {
-    grid-template-rows: repeat(3, 300px);
+    grid-auto-rows: 300px;
   }
 
   .products__item {
@@ -3320,8 +3332,6 @@ body.clear-bg::before {
     font-size: 12px;
   }
 
-  /* Выключен */
-
   .product-about {
     margin-bottom: 120px;
   }
@@ -3383,6 +3393,7 @@ body.clear-bg::before {
   }
 
   .product-about__calendar {
+    z-index: 1000;
     display: none;
     position: fixed;
     width: 100%;
@@ -3451,6 +3462,10 @@ body.clear-bg::before {
     padding: 191px 74px 0;
   }
 
+  .privacy__list {
+    margin-bottom: 120px;
+  }
+
   .privacy__title {
     font-weight: 600;
     font-size: 56px;
@@ -3461,6 +3476,7 @@ body.clear-bg::before {
   .privacy__descr {
     font-weight: 300;
     font-size: 12px;
+    margin-bottom: 72px;
     line-height: 15px;
   }
 
@@ -3704,10 +3720,6 @@ body.clear-bg::before {
             flex: 1 1 50%;
   }
 
-  .equipment-rental.dark {
-    margin: 100px 0;
-  }
-
   .equipment-rental__descr {
     max-width: 100%;
   }
@@ -3826,13 +3838,14 @@ body.clear-bg::before {
   }
 
   .privacy__inner {
-    padding: 191px 74px 0;
+    padding: 168px 23px 0;
   }
 
   .privacy__descr {
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;
+    margin-bottom: 72px;
   }
 
   .privacy__article-text {
@@ -4122,6 +4135,10 @@ body.clear-bg::before {
     font-size: 12px;
   }
 
+  .equipment-rental.dark {
+    margin: 76px 0;
+  }
+
   .input__wrapp:not(:last-of-type) {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -4167,6 +4184,7 @@ body.clear-bg::before {
   }
 
   .product-about {
+    margin-top: 35px;
     padding: 0 16px;
     margin-bottom: 104px;
   }
@@ -4177,6 +4195,7 @@ body.clear-bg::before {
 
   .product-about__center-head {
     max-width: 317px;
+    font-size: 24px;
     margin: 0 auto;
   }
 
@@ -4233,7 +4252,7 @@ body.clear-bg::before {
   }
 
   .privacy__inner {
-    padding: 135px 24px 0;
+    padding: 135px 16px 0;
   }
 
   .privacy__title {
