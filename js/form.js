@@ -1,6 +1,6 @@
 const form = document.querySelector(".message__form");
 const validate = {
-  validateEmail(email) {
+  email(email) {
     const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.trim().length === 0) {
@@ -8,16 +8,47 @@ const validate = {
     }
     return !!regex.test(email.toLowerCase());
   },
-  validateName(value) {
+  name(value) {
     const pattern = /^[\p{L} ]+$/gu;
     return !!pattern.test(value);
   },
-  validatePhone(value) {
+  phone(value) {
     const pattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,15}(\s*)?$/;
 
     return !!pattern.test(value);
   },
+  drawError(field, valid) {
+    if (valid) {
+      field.parentNode.classList.remove("error");
+    } else {
+      field.parentNode.classList.add("error");
+    }
+  },
+  start(form) {
+    let valid = true;
+
+    const fields = form.querySelectorAll('input');
+
+    fields.forEach((field) => {
+      if (field.name === 'name') {
+        valid = validate.name(field.value);
+
+        validate.drawError(field, valid);
+      } else if (field.type === 'tel') {
+        valid = validate.phone(field.value);
+
+        validate.drawError(field, valid);
+      } else if (field.type === 'email') {
+        valid = validate.email(field.value);
+
+        validate.drawError(field, valid);
+      }
+    });
+
+    return valid;
+  }
 };
+
 if (form) {
   const inpust = form.querySelectorAll(".message__input");
   inpust.forEach((item) => {
@@ -36,7 +67,9 @@ if (form) {
   form.addEventListener("submit", (evt) => {
     evt.preventDefault();
 
-    if (typeof window.additional !== "undefined") {
+    const valid = validate.start(form);
+
+    if (valid && (typeof window.additional !== "undefined")) {
       window.additional.forms(form);
     }
   });
@@ -46,24 +79,12 @@ if (form) {
   const tel = form.querySelector('input[type="tel"]');
 
   name.addEventListener("input", () => {
-    if (validate.validateName(name.value)) {
-      name.parentNode.classList.remove("error");
-    } else {
-      name.parentNode.classList.add("error");
-    }
+    validate.drawError(name, validate.name(name.value));
   });
   email.addEventListener("input", () => {
-    if (validate.validateEmail(email.value)) {
-      email.parentNode.classList.remove("error");
-    } else {
-      email.parentNode.classList.add("error");
-    }
+    validate.drawError(email, validate.email(email.value));
   });
   tel.addEventListener("input", () => {
-    if (validate.validatePhone(tel.value)) {
-      tel.parentNode.classList.remove("error");
-    } else {
-      tel.parentNode.classList.add("error");
-    }
+    validate.drawError(tel, validate.phone(tel.value));
   });
 }
