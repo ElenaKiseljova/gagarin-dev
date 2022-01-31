@@ -1,270 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css" />
-  <title>Document</title>
-</head>
-
-<body class="white-bg">
-  <div class="curtains">
-    <div class="curtains__inner">
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="products.html">Товары</a></li>
-        <li><a href="product.html">Страница продукта</a></li>
-        <li><a href="privacy.html">Условия проката</a></li>
-        <li><a href="rent.html">АРЕНДУЙТЕ ТЕХНИКУ</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="wrapper">
-    <div class="header-wrapper">
-      <header class="header h_fix dark">
-        <nav class="nav dark">
-          <ul>
-            <li>
-              <a href="products.html">товары</a>
-            </li>
-            <li>
-              <a href="#">гагарин шоу</a>
-            </li>
-            <li>
-              <a href="privacy.html">условия проката</a>
-            </li>
-            <li class="hide">
-              <button class="header__lang">Русский</button>
-            </li>
-          </ul>
-          <a href="index.html" class="header__logo dark">
-            <img src="img/logo-black.svg" alt="" />
-          </a>
-          <ul>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-
-            <li>
-              <button class="basket-btn">Корзина</button>
-            </li>
-            <li class="hide">
-              <button class="header__burger">
-                <span class="header__burger-title">Меню</span>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-
-    <div class="main">
-      <section class="equipment-rental dark">
-        <div class="equipment-rental__left">
-          <h2 class="equipment-rental__title">
-            <span>арендуйте</span>
-            <span class="equipment-rental__title-right">технику</span>
-          </h2>
-          <p class="equipment-rental__descr">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc integer
-            ultrices fringilla risus, in quam viverra. Nisl odio eget ac vitae in
-            auctor molestie. Ut vel, egestas eu sed proin dictum ipsum in.
-            Pellentesque quis Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc integer ultrices fringilla risus, in quam viverra. Nisl odio eget ac
-          </p>
-        </div>
-        <div class="equipment-rental__right">
-          <form class="message__form form dark">
-            <div class="input__wrapp">
-              <input type="text" name="name" class="_req message__input" />
-              <span class="input-placeholder p1 p1-light">Ваше имя</span>
-              <span class="input-placeholder-error">The field is required.</span>
-            </div>
-            <div class="input__wrapp">
-              <input type="text" name="city" class="_req message__input" />
-              <span class="input-placeholder p1 p1-light">Ваш город</span>
-              <span class="input-placeholder-error">The field is required.</span>
-            </div>
-            <div class="input__wrapp">
-              <input type="tel" name="phone" class="_req message__input" />
-              <span class="input-placeholder p1 p1-light">Ваш телефон</span>
-              <span class="input-placeholder-error">The field is required.</span>
-            </div>
-            <div class="input__wrapp">
-              <input type="email" name="email" class="_req message__input" />
-              <span class="input-placeholder p1 p1-light">Ваш e-mail</span>
-              <span class="input-placeholder-error">The field is required.</span>
-            </div>
-            <div class="input__wrapp">
-              <input type="text" name="name" class="_req message__input" />
-              <span class="input-placeholder p1 p1-light">ваше сообщение</span>
-              <span class="input-placeholder-error">The field is required.</span>
-            </div>
-            <button class="btn" type="submit">
-              <span class="btn__brackets btn__brackets--left">(</span>
-              rent
-              <span class="btn__brackets btn__brackets--right">)</span>
-            </button>
-          </form>
-        </div>
-      </section>
-
-    </div>
-    <footer class="footer dark">
-      <div class="social">
-        <ul class="social__list">
-          <div class="social__block social__block-left">
-            <a href="https://gagarin.show/privacy-policy" class="social__item social__item--without-border--white"
-              data-hover="
-	Privacy
-">
-              PRIVACY POLICY </a><a href="https://gagarin.show/terms-of-use"
-              class="social__item social__item--without-border--white" data-hover="
-	Terms
-">
-              terms of use
-            </a>
-          </div>
-          <div class="social__block">
-            <a target="_blank" href="https://www.youtube.com/channel/UCeCvH7wYUvURzYiWy8Zxs2g/featured"
-              class="social__item" data-hover="YOUTUBE.COM">YOUTUBE.COM</a><a target="_blank"
-              href="https://www.facebook.com/" class="social__item" data-hover="FACEBOOK ">FACEBOOK </a><a
-              target="_blank" href="https://www.instagram.com/gagarin.show/" class="social__item"
-              data-hover="INSTAGRAM ">INSTAGRAM </a><a target="_blank" href="https://www.tiktok.com/uk-UA/"
-              class="social__item" data-hover="TIKTOK ">TIKTOK </a><a target="_blank" href="https://web.telegram.org/"
-              class="social__item" data-hover="TELEGRAM">TELEGRAM</a>
-          </div>
-
-          <div class="social__block social__block-right">
-            <span>
-              SITE BY
-              <a target="_blank" href="https://thefirstthelast.agency/"
-                class="social__item social__item--developer social__item--white social__item--white" data-v-6089ecab=""
-                data-hover="the first the last">the first the last</a></span>
-          </div>
+  <body class="white-bg">
+    <div class="curtains">
+      <div class="curtains__inner">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="products.html">Товары</a></li>
+          <li><a href="product.html">Страница продукта</a></li>
+          <li><a href="privacy.html">Условия проката</a></li>
+          <li><a href="rent.html">АРЕНДУЙТЕ ТЕХНИКУ</a></li>
         </ul>
       </div>
-    </footer>
-
-    <div class="basket">
-      <div class="basket__wrapper">
-        <div class="basket__top">
-          <div class="basket__top-left">
-            <div class="basket__count">items:<span> 1 </span></div>
-
-            <div class="basket__total">total:<span> 1800 uah </span></div>
-          </div>
-          <div class="basket__top-close">
-            <button class="btn-close">
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="-0.5" x2="22.1269" y2="-0.5"
-                  transform="matrix(0.722639 0.691226 -0.722639 0.691226 0.010498 1.20532)" stroke="#0A0A0A" />
-                <line y1="-0.5" x2="22.1269" y2="-0.5"
-                  transform="matrix(-0.722639 0.691226 -0.722639 -0.691226 15.9895 0.5)" stroke="#0A0A0A" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="basket__center">
-          <a href="product.html" class="products__item">
-            <span class="products__item-name">Canon EOS 5D Mark IV body</span>
-            <div class="products__item-image">
-              <img src="img/image-1.png" alt="image" />
-              <span class="products__item-info">17 февраля - 21 февраля, 1800 uah</span>
-            </div>
-          </a>
-          <a href="product.html" class="products__item">
-            <span class="products__item-name">Canon EOS 5D Mark IV body</span>
-            <div class="products__item-image">
-              <img src="img/image-1.png" alt="image" />
-              <span class="products__item-info">17 февраля - 21 февраля, 1800 uah</span>
-            </div>
-          </a>
-          <a href="product.html" class="products__item">
-            <span class="products__item-name">Canon EOS 5D Mark IV body</span>
-            <div class="products__item-image">
-              <img src="img/image-1.png" alt="image" />
-              <span class="products__item-info">17 февраля - 21 февраля, 1800 uah</span>
-            </div>
-          </a>
-        </div>
-        <div class="basket__bottom">
-          <a href="rent.html" class="btn btn-show"><span class="btn__brackets btn__brackets--left">(</span>
-            go to checkout
-            <span class="btn__brackets btn__brackets--right">)</span>
-          </a>
-        </div>
-      </div>
     </div>
-    <div class="fix-nav --white">
-      <div class="fix-nav__content">
-        <div class="fix-nav__head">
-          <button class="header__lang">Русский</button>
-          <a href="/" class="header__logo nuxt-link-active"><img src="img/logo-black.svg" alt="logo"
-              class="header__logo-img" /></a>
-          <button class="close__burger">закрыть</button>
-        </div>
-        <div class="fix-nav__body">
-          <div class="fix-nav__img -img-1" style="background-image: url(img/error/5.jpg)"></div>
-          <div class="fix-nav__block -block-1 h2">
-            <a href="products.html" class="fix-nav__link --big">Товары</a>
+
+    <div class="wrapper">
+      <div class="header-wrapper">
+        <header class="header h_fix dark">
+          <nav class="nav dark">
+            <ul>
+              <li>
+                <a href="products.html">товары</a>
+              </li>
+              <li>
+                <a href="#">гагарин шоу</a>
+              </li>
+              <li>
+                <a href="privacy.html">условия проката</a>
+              </li>
+              <li class="hide">
+                <button class="header__lang">Русский</button>
+              </li>
+            </ul>
+            <a href="index.html" class="header__logo dark">
+              <img src="img/logo-black.svg" alt="" />
+            </a>
+            <ul>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+
+              <li>
+                <button class="basket-btn">Корзина</button>
+              </li>
+              <li class="hide">
+                <button class="header__burger">
+                  <span class="header__burger-title">Меню</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <div class="main">
+        <section class="equipment-rental dark">
+          <div class="equipment-rental__left">
+            <h2 class="equipment-rental__title">
+              <span>арендуйте</span>
+              <span class="equipment-rental__title-right">технику</span>
+            </h2>
+            <p class="equipment-rental__descr">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              integer ultrices fringilla risus, in quam viverra. Nisl odio eget
+              ac vitae in auctor molestie. Ut vel, egestas eu sed proin dictum
+              ipsum in. Pellentesque quis Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc integer ultrices fringilla
+              risus, in quam viverra. Nisl odio eget ac
+            </p>
           </div>
-          <div class="fix-nav__block -block-2 h2">
-            <div class="fix-nav__img -img-2" style="background-image: url(img/error/3.jpg)"></div>
-            <div class="fix-nav__links">
-              <a href="index.html" class="fix-nav__link --big nuxt-link-exact-active nuxt-link-active"
-                aria-current="page">Гагарин шоу</a>
-              <a href="privacy.html" class="fix-nav__link --big">Условия проката</a>
-            </div>
-          </div>
-          <div class="fix-nav__block -block-3 h2">
-            <div class="fix-nav__links">
-              <a href="#" class="fix-nav__link --small">Контакты</a>
-              <button href="#" class="fix-nav__link --small basket-btn">
-                Корзина
+          <div class="equipment-rental__right">
+            <form class="message__form form dark">
+              <div class="input__wrapp">
+                <input type="text" name="name" class="_req message__input" />
+                <span class="input-placeholder p1 p1-light">Ваше имя</span>
+                <span class="input-placeholder-error"
+                  >The field is required.</span
+                >
+              </div>
+              <div class="input__wrapp">
+                <input type="text" name="city" class="_req message__input" />
+                <span class="input-placeholder p1 p1-light">Ваш город</span>
+                <span class="input-placeholder-error"
+                  >The field is required.</span
+                >
+              </div>
+              <div class="input__wrapp">
+                <input type="tel" name="phone" class="_req message__input" />
+                <span class="input-placeholder p1 p1-light">Ваш телефон</span>
+                <span class="input-placeholder-error"
+                  >The field is required.</span
+                >
+              </div>
+              <div class="input__wrapp">
+                <input type="email" name="email" class="_req message__input" />
+                <span class="input-placeholder p1 p1-light">Ваш e-mail</span>
+                <span class="input-placeholder-error"
+                  >The field is required.</span
+                >
+              </div>
+              <div class="input__wrapp">
+                <input type="text" name="name" class="_req message__input" />
+                <span class="input-placeholder p1 p1-light"
+                  >ваше сообщение</span
+                >
+                <span class="input-placeholder-error"
+                  >The field is required.</span
+                >
+              </div>
+              <button class="btn" type="submit">
+                <span class="btn__brackets btn__brackets--left">(</span>
+                rent
+                <span class="btn__brackets btn__brackets--right">)</span>
               </button>
-            </div>
-            <div class="fix-nav__img -img-3" style="background-image: url(img/error/2.jpg)"></div>
+            </form>
           </div>
-          <div class="fix-nav__img -img-4" style="background-image: url(img/error/4.jpg)"></div>
-        </div>
-        <div class="fix-nav__foot">
+        </section>
+      </div>
+      <footer class="footer dark">
+        <div class="social">
           <ul class="social__list">
-            <li class="social__block social__block--intro">
-              <a target="_blank" href="https://www.instagram.com/" class="social__item social__item--grey"
-                data-hover="instagram">instagram</a>
-              <a target="_blank" href="https://www.facebook.com/" class="social__item social__item--grey"
-                data-hover="facebook">facebook</a>
-            </li>
-            <li class="social__block social__block--intro youtube-main-link">
-              <a target="_blank" href="https://www.youtube.com/channel/UCeCvH7wYUvURzYiWy8Zxs2g"
-                class="social__item social__item--dark --without-border" data-hover="youtube.com">youtube.com</a>
-            </li>
-            <li class="social__block social__block--intro">
-              <a target="_blank" href="https://www.tiktok.com/" class="social__item social__item--grey"
-                data-hover="tiktok">tiktok</a>
-              <a target="_blank" href="https://web.telegram.org/k/" class="social__item social__item--grey"
-                data-hover="telegram">telegram</a>
-            </li>
+            <div class="social__block social__block-left">
+              <a
+                href="https://gagarin.show/privacy-policy"
+                class="social__item social__item--without-border--white"
+                data-hover="
+	Privacy
+"
+              >
+                PRIVACY POLICY </a
+              ><a
+                href="https://gagarin.show/terms-of-use"
+                class="social__item social__item--without-border--white"
+                data-hover="
+	Terms
+"
+              >
+                terms of use
+              </a>
+            </div>
+            <div class="social__block">
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCeCvH7wYUvURzYiWy8Zxs2g/featured"
+                class="social__item"
+                data-hover="YOUTUBE.COM"
+                >YOUTUBE.COM</a
+              ><a
+                target="_blank"
+                href="https://www.facebook.com/"
+                class="social__item"
+                data-hover="FACEBOOK "
+                >FACEBOOK </a
+              ><a
+                target="_blank"
+                href="https://www.instagram.com/gagarin.show/"
+                class="social__item"
+                data-hover="INSTAGRAM "
+                >INSTAGRAM </a
+              ><a
+                target="_blank"
+                href="https://www.tiktok.com/uk-UA/"
+                class="social__item"
+                data-hover="TIKTOK "
+                >TIKTOK </a
+              ><a
+                target="_blank"
+                href="https://web.telegram.org/"
+                class="social__item"
+                data-hover="TELEGRAM"
+                >TELEGRAM</a
+              >
+            </div>
+
+            <div class="social__block social__block-right">
+              <span>
+                SITE BY
+                <a
+                  target="_blank"
+                  href="https://thefirstthelast.agency/"
+                  class="social__item social__item--developer social__item--white social__item--white"
+                  data-v-6089ecab=""
+                  data-hover="the first the last"
+                  >the first the last</a
+                ></span
+              >
+            </div>
           </ul>
         </div>
+      </footer>
+      <div class="basket">
+        <div class="basket__wrapper">
+          <div class="basket__top">
+            <div class="basket__top-left">
+              <div class="basket__count">items:<span> 1 </span></div>
+
+              <div class="basket__total">total:<span> 1800 uah </span></div>
+            </div>
+            <div class="basket__top-close">
+              <button class="btn-close">
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    y1="-0.5"
+                    x2="22.1269"
+                    y2="-0.5"
+                    transform="matrix(0.722639 0.691226 -0.722639 0.691226 0.010498 1.20532)"
+                    stroke="#0A0A0A"
+                  />
+                  <line
+                    y1="-0.5"
+                    x2="22.1269"
+                    y2="-0.5"
+                    transform="matrix(-0.722639 0.691226 -0.722639 -0.691226 15.9895 0.5)"
+                    stroke="#0A0A0A"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="basket__center">
+            <a href="product.html" class="products__item">
+              <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+              <div class="products__item-image">
+                <img src="img/image-1.png" alt="image" />
+                <span class="products__item-info"
+                  >17 февраля - 21 февраля, 1800 uah</span
+                >
+              </div>
+            </a>
+            <a href="product.html" class="products__item">
+              <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+              <div class="products__item-image">
+                <img src="img/image-1.png" alt="image" />
+                <span class="products__item-info"
+                  >17 февраля - 21 февраля, 1800 uah</span
+                >
+              </div>
+            </a>
+            <a href="product.html" class="products__item">
+              <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+              <div class="products__item-image">
+                <img src="img/image-1.png" alt="image" />
+                <span class="products__item-info"
+                  >17 февраля - 21 февраля, 1800 uah</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="basket__bottom">
+            <a href="rent.html" class="btn btn-show"
+              ><span class="btn__brackets btn__brackets--left">(</span>
+              go to checkout
+              <span class="btn__brackets btn__brackets--right">)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="fix-nav --dark">
+        <div class="fix-nav__content">
+          <div class="fix-nav__head">
+            <button class="header__lang">Русский</button>
+            <a href="/" class="header__logo nuxt-link-active"
+              ><img
+                src="img/logo-black.svg"
+                alt="logo"
+                class="header__logo-img"
+            /></a>
+            <button class="close__burger">закрыть</button>
+          </div>
+          <div class="fix-nav__body">
+            <div
+              class="fix-nav__img -img-1"
+              style="background-image: url(img/error/5.jpg)"
+            ></div>
+            <div class="fix-nav__block -block-1 h2">
+              <a href="products.html" class="fix-nav__link --big">Товары</a>
+            </div>
+            <div class="fix-nav__block -block-2 h2">
+              <div
+                class="fix-nav__img -img-2"
+                style="background-image: url(img/error/3.jpg)"
+              ></div>
+              <div class="fix-nav__links">
+                <a
+                  href="index.html"
+                  class="fix-nav__link --big nuxt-link-exact-active nuxt-link-active"
+                  aria-current="page"
+                  >Гагарин шоу</a
+                >
+                <a href="privacy.html" class="fix-nav__link --big"
+                  >Условия проката</a
+                >
+              </div>
+            </div>
+            <div class="fix-nav__block -block-3 h2">
+              <div class="fix-nav__links">
+                <a href="#" class="fix-nav__link --small">Контакты</a>
+                <button href="#" class="fix-nav__link --small basket-btn">
+                  Корзина
+                </button>
+              </div>
+              <div
+                class="fix-nav__img -img-3"
+                style="background-image: url(img/error/2.jpg)"
+              ></div>
+            </div>
+            <div
+              class="fix-nav__img -img-4"
+              style="background-image: url(img/error/4.jpg)"
+            ></div>
+          </div>
+          <div class="fix-nav__foot">
+            <ul class="social__list">
+              <li class="social__block social__block--intro">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  class="social__item social__item--grey"
+                  data-hover="instagram"
+                  >instagram</a
+                >
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/"
+                  class="social__item social__item--grey"
+                  data-hover="facebook"
+                  >facebook</a
+                >
+              </li>
+              <li class="social__block social__block--intro youtube-main-link">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCeCvH7wYUvURzYiWy8Zxs2g"
+                  class="social__item social__item--dark --without-border"
+                  data-hover="youtube.com"
+                  >youtube.com</a
+                >
+              </li>
+              <li class="social__block social__block--intro">
+                <a
+                  target="_blank"
+                  href="https://www.tiktok.com/"
+                  class="social__item social__item--grey"
+                  data-hover="tiktok"
+                  >tiktok</a
+                >
+                <a
+                  target="_blank"
+                  href="https://web.telegram.org/k/"
+                  class="social__item social__item--grey"
+                  data-hover="telegram"
+                  >telegram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-
-  </div>
-  <!-- GSAP -->
-  <script src="js/libs/gsap.js"></script>
-  <script src="js/libs/gsapPlugins.js"></script>
-  <script src="js/animation.js"></script>
-  <script src="js/my-anim.js"></script>
-  <!-- Styles -->
-  <script src="js/basket.js"></script>
-  <script src="js/burger.js"></script>
-  <script src="js/curtains.js"></script>
-  <script src="js/form.js"></script>
-</body>
-
+    <!-- GSAP -->
+    <script src="js/libs/gsap.js"></script>
+    <script src="js/libs/gsapPlugins.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/my-anim.js"></script>
+    <!-- Styles -->
+    <script src="js/basket.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/curtains.js"></script>
+    <script src="js/form.js"></script>
+  </body>
 </html>

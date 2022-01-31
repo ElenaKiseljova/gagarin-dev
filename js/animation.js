@@ -116,52 +116,6 @@ const animateRocket = (el, item) => {
   scrollTriggerInstance(el, tl);
   return tl;
 };
-const animateProductToCart = (el, pos, cart) => {
-  if (window.innerWidth <= 650) {
-    // gsap.to(cart,{onStart:()=>{
-
-    //   cart.classList.add('active')
-    // },onComplete:()=>{
-    //   cart.classList.remove('active')
-    // }})
-    return;
-  }
-
-  const video = `<div class='product-item__wrapper' style='left:50%; transform:translateX(-50%) scale(0.2)'><video
-class='product-item'
-style='width:100%;'
-autoplay
-loop
-muted
-playsinline
->
-<source src="${el}" />
-</video>
-</div>
-`;
-  pos.insertAdjacentHTML("afterbegin", video);
-  const elem = document.querySelector(".product-item__wrapper");
-  const elParams = elem.getBoundingClientRect();
-
-  // const innerWidth=window.innerWidth+elParams.width;
-  const yMove = window.innerHeight - 80 - elParams.top + elParams.height / 2;
-  const xMove = window.innerWidth / 2 + elParams.width / 2;
-
-  gsap.set(elem, { position: "absolute" });
-  gsap.to(elem, {
-    x: xMove,
-    y: yMove,
-    scale: 0.05,
-    duration: 3,
-    onComplete: () => {
-      elem.remove();
-    },
-  });
-  gsap.set(elem, {
-    opacity: 0,
-    delay: 1.5,
-  });
-};
 
 const animateLogo = (el) => {
   const items = Array.from(el.children).filter((el) =>
@@ -213,3 +167,53 @@ const resetParallax = ($event) => {
   gsap.to(el, { x: 0, y: 0, scale: 1 });
   gsap.to(el.children, { x: 0, y: 0 });
 };
+const animateProductToCart = (el, pos, cart) => {
+  if (window.innerWidth <= 650) {
+    gsap.to(cart, {
+      onStart: () => {
+        cart.classList.add("active");
+      },
+      onComplete: () => {
+        cart.classList.remove("active");
+      },
+    });
+    return;
+  }
+
+  const image = `<img class="phantom-image" src=${el} />`;
+  pos.insertAdjacentHTML("afterbegin", image);
+  const elem = document.querySelector(".phantom-image");
+  const elParams = elem.getBoundingClientRect();
+
+  const innerWidth = window.innerWidth + elParams.width;
+  const yMove =
+    window.innerHeight - 200; /* - 80 - elParams.top + elParams.height / 2 */
+  const xMove = innerWidth; /* / 2 + elParams.width / 2 */
+
+  gsap.set(elem, {
+    position: "absolute",
+    x: "50%",
+    y: "50%",
+  });
+  gsap.to(elem, {
+    x: xMove,
+    y: yMove,
+    scale: 0.01,
+    duration: 3,
+    onComplete: () => {
+      elem.remove();
+    },
+  });
+  gsap.set(elem, {
+    opacity: 0,
+    delay: 1.5,
+  });
+};
+/* const cart = document.querySelector(".add-to-cart");
+cart.addEventListener("click", (e) => {
+  const el = e.target.dataset.src;
+  const pos = document.querySelector(".slider");
+  const shopBag = document.querySelector(".shop__bag");
+  animateProductToCart(el, pos, shopBag);
+});
+ */
