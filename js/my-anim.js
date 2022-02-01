@@ -13,11 +13,14 @@ animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
 animateFadeOutBottom(".about__list", ".about__list *");
 animateFadeOutBottom(".basket", ".btn-show");
 /* Product */
-animateFadeOutBottom(".product-about__center", ".product-about__wrapp h2");
-animateFadeOutBottom(".product-about__center", ".product-about__center > *");
+
 animateFadeOutBottom(".product-about__slider", ".slider");
 animateFadeOutBottom(".calendar ", ".calendar__wrapper > *");
 animateFadeOutBottom(".product-description ", ".product-description > *");
+/* На экранах < 1023 анимации описания тована не будет */
+if (document.body.offsetWidth > 1023) {
+  animateFadeOutBottom(".product-about__center", ".product-about__center > *");
+}
 
 /* Privacy */
 animateFadeOutBottom(".privacy__inner", ".privacy__inner h1");

@@ -1482,6 +1482,7 @@ body.clear-bg::before {
 }
 .slider__item {
   width: 300px;
+	outline: none;
 }
 .slider__item img {
   margin: 0 auto;
