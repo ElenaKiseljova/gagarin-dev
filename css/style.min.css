@@ -1115,7 +1115,7 @@ body.clear-bg::before {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   background-color: transparent;
-  font-family: Mont-Regular, sans-serif;
+  font-family: Mont, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -2121,7 +2121,7 @@ body.clear-bg::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 60px;
+  bottom: 24px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2866,9 +2866,9 @@ body.clear-bg::before {
   }
 }
 @media (max-width: 1023px) {
-  .shop__bag {
+  /*  .shop__bag {
     bottom: 90px;
-  }
+  } */
   .btn-more {
     margin: 37px 0 120px;
   }
@@ -3177,9 +3177,9 @@ body.clear-bg::before {
   }
 }
 @media (max-width: 767px) {
-  .shop__bag {
+  /*  .shop__bag {
     bottom: 160px;
-  }
+  } */
   .btn-more {
     margin: 30px 0 104px;
   }

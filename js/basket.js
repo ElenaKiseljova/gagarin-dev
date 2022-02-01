@@ -32,17 +32,10 @@ basket.addEventListener("click", (event) => {
     document.body.classList.remove("active");
   } else return;
 });
-//получив высоту дока
-/* let dokHeight = document.body.offsetHeight;
-window.addEventListener("scroll", () => {
-  let a = window.pageYOffset - footer;
-  let posTop =
-    window.pageYOffset !== undefined
-      ? window.pageYOffset
-      : (document.documentElement || document.body.parentNode || document.body)
-          .scrollTop;
-  console.log(", y=" + posTop);
-  if (posTop > a) {
+
+$(window).scroll(function () {
+  const footer = document.querySelector(".footer").offsetHeight;
+  if ($(window).scrollTop() == $(document).height() - $(window).height()) {
     document.querySelector(
       ".shop__bag"
     ).style.transform = `translateY(${-footer}px)`;
@@ -50,4 +43,3 @@ window.addEventListener("scroll", () => {
     document.querySelector(".shop__bag").style.transform = `translateY(0)`;
   }
 });
- */

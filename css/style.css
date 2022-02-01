@@ -1021,7 +1021,7 @@ body.clear-bg::before {
   font-family: "Mont", sans-serif;
   font-weight: 400;
   opacity: 0.5;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 18px;
   text-transform: uppercase;
   color: #fff;
@@ -3535,9 +3535,9 @@ body.clear-bg::before {
 }
 
 @media (max-width: 1023px) {
-  .shop__bag {
+  /* .shop__bag {
     bottom: 90px;
-  }
+  } */
   .btn-more {
     margin: 37px 0 120px;
   }
@@ -3909,9 +3909,9 @@ body.clear-bg::before {
 }
 
 @media (max-width: 767px) {
-  .shop__bag {
+  /*  .shop__bag {
     bottom: 160px;
-  }
+  } */
   .btn-more {
     margin: 30px 0 104px;
   }
