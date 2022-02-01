@@ -6,7 +6,7 @@ let documentWidth = document.querySelector("body").clientWidth;
 checkWidth(documentWidth);
 
 function checkWidth(param) {
-  calendarBtn.addEventListener("click", (e) => {
+  calendarBtn?.addEventListener("click", (e) => {
     if (param < 1439) {
       e.preventDefault();
       calendar.classList.add("active");
