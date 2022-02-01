@@ -1,8 +1,8 @@
 const form = document.querySelector(".message__form");
 const validate = {
   email(email) {
-    const regex =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
     if (email.trim().length === 0) {
       return false;
     }
@@ -27,18 +27,18 @@ const validate = {
   start(form) {
     let valid = true;
 
-    const fields = form.querySelectorAll('input');
+    const fields = form.querySelectorAll("input");
 
     fields.forEach((field) => {
-      if (field.name === 'name') {
+      if (field.name === "name") {
         valid = validate.name(field.value);
 
         validate.drawError(field, valid);
-      } else if (field.type === 'tel') {
+      } else if (field.type === "tel") {
         valid = validate.phone(field.value);
 
         validate.drawError(field, valid);
-      } else if (field.type === 'email') {
+      } else if (field.type === "email") {
         valid = validate.email(field.value);
 
         validate.drawError(field, valid);
@@ -46,7 +46,7 @@ const validate = {
     });
 
     return valid;
-  }
+  },
 };
 
 if (form) {
@@ -69,7 +69,7 @@ if (form) {
 
     const valid = validate.start(form);
 
-    if (valid && (typeof window.additional !== "undefined")) {
+    if (valid && typeof window.additional !== "undefined") {
       window.additional.forms(form);
     }
   });
@@ -77,9 +77,12 @@ if (form) {
   const name = form.querySelector('input[name="name"]');
   const email = form.querySelector('input[type="email"]');
   const tel = form.querySelector('input[type="tel"]');
-
+  const city = form.querySelector('input[name="city"]');
   name.addEventListener("input", () => {
     validate.drawError(name, validate.name(name.value));
+  });
+  city.addEventListener("input", () => {
+    validate.drawError(city, validate.name(city.value));
   });
   email.addEventListener("input", () => {
     validate.drawError(email, validate.email(email.value));
