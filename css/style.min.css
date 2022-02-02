@@ -202,7 +202,9 @@ body.white-bg .footer.dark .social__block-right a::before {
   height: 0.2px;
   transition: 0.5s ease;
 }
-
+.footer.footer--padding {
+  padding-top: 120px;
+}
 body.white-bg .footer.dark .social__block-right a:hover::before {
   width: 0;
 }
@@ -650,6 +652,7 @@ body.clear-bg::before {
 .filter__input {
   width: 52px;
   padding: 0;
+  border-radius: 0;
   padding-bottom: 8px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
@@ -990,6 +993,9 @@ body.clear-bg::before {
   -webkit-transition: opacity 0.2s linear;
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
+}
+.btn.btn--no-m {
+  margin-bottom: 0;
 }
 .btn__brackets {
   font-family: Mont, sans-serif;
@@ -1450,6 +1456,8 @@ body.clear-bg::before {
   height: 28px;
   border-radius: 50%;
   border: 1px solid #000;
+  background-color: #eaeaea;
+  font-size: 0;
 }
 .product-about__center-counters .buttons button.minus {
   margin-right: 13px;
@@ -1922,6 +1930,7 @@ body.clear-bg::before {
 .basket__center .products__item {
   display: block;
   margin: 0;
+  position: relative;
 }
 .basket__center .products__item-name {
   font-size: 14px;
@@ -1932,6 +1941,7 @@ body.clear-bg::before {
   display: block;
 }
 .basket__center .products__item-image {
+  text-decoration: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -1948,6 +1958,16 @@ body.clear-bg::before {
 .basket__center .products__item-image img {
   margin: auto 0;
   width: 80%;
+}
+.basket__center .products__item-image .products__del {
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  right: 0px;
+  border: none;
+  background-color: transparent;
 }
 .basket__center .products__item-info {
   padding: 0 16px;
@@ -2152,6 +2172,7 @@ body.clear-bg::before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  align-items: flex-start;
   margin: 0 auto;
 }
 .fix-nav__block.-block-3 {
@@ -2191,6 +2212,24 @@ body.clear-bg::before {
 }
 .fix-nav__text.--show {
   display: none;
+}
+.fix-nav__block a {
+  position: relative;
+}
+.fix-nav__block a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: #000;
+  height: 1px;
+  transition: 0.5s ease;
+}
+@media (hover: hover) {
+  .fix-nav__block a:hover::before {
+    width: 100%;
+  }
 }
 .shop__bag {
   position: fixed;
@@ -3256,6 +3295,9 @@ body.clear-bg::before {
   /*  .shop__bag {
     bottom: 160px;
   } */
+  .fix-nav__block.-block-2 .fix-nav__links {
+    align-items: center;
+  }
   .btn-more {
     margin: 5px auto 104px;
   }

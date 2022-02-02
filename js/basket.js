@@ -2,12 +2,18 @@ const basketBtn = document.querySelectorAll(".basket-btn , .shop__bag");
 const basket = document.querySelector(".basket");
 
 const basketBtnClose = document.querySelector(".btn-close");
+const btnCheckout = document.querySelector(".btn-checkout");
 const btnCalendarOpen = document.querySelector(".btn-calendar-open");
 const mobileNav = document.querySelector(".fix-nav");
 const basketWrapper = document.querySelector(".basket__wrapper");
 //Получим высоту footer'а
 const footer = document.querySelector(".footer").offsetHeight;
-
+/* go to checkout */
+btnCheckout?.addEventListener("click", (e) => {
+  e.preventDefault();
+  toggleClassActive();
+  document.body.classList.remove("active");
+});
 /* Ф-ция открытия и закрытия корзины */
 const toggleClassActive = () => {
   document.body.classList.add("active");
