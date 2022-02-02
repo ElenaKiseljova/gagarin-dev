@@ -1698,6 +1698,13 @@ body.clear-bg::before {
   opacity: 1;
   border-radius: 50%;
 }
+.calendar__item.include {
+  opacity: 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000;
+
+  border-radius: 50%;
+}
 .calendar__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
