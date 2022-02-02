@@ -8,6 +8,10 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"
     />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Document</title>
   </head>
   <body class="white-bg">
@@ -65,20 +69,61 @@
           <img src="img/arrow-back.svg" alt="" />
           <span>back to all</span>
         </a>
-        <div class="slider">
-          <div class="slider-for">
-            <div class="slider__item"><img src="img/image-1.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-4.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-5.png" alt="" /></div>
+
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="slider__item swiper-slide">
+              <img src="img/image-1.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-2.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-2.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-4.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
           </div>
-          <div class="slider-nav">
-            <div class="slider__item"><img src="img/image-1.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-2.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-4.png" alt="" /></div>
-            <div class="slider__item"><img src="img/image-5.png" alt="" /></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="slider__item swiper-slide">
+              <img src="img/image-1.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-2.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-2.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-4.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
+            <div class="slider__item swiper-slide">
+              <img src="img/image-5.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -648,7 +693,7 @@
     <script src="js/libs/jq-lib.js"></script>
     <!-- Slick-slider lib -->
     <script src="js/libs/slick-slider-lib.js"></script>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- GSAP -->
     <script src="js/libs/gsap.js"></script>
     <script src="js/libs/gsapPlugins.js"></script>
