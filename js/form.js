@@ -2,7 +2,6 @@ const form = document.querySelector(".message__form");
 const validate = {
   email(email) {
     const regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
     if (email.trim().length === 0) {
       return false;
     }
