@@ -1680,6 +1680,7 @@ body.clear-bg::before {
   cursor: pointer;
 }
 .calendar__item.passed {
+  pointer-events: none;
   opacity: 0.2;
   color: #000;
   font-size: 16px;
@@ -3306,7 +3307,9 @@ body.clear-bg::before {
     align-items: center;
   }
   .btn-more {
-    margin: 5px auto 104px;
+    display: flex;
+    margin: 0 auto 104px;
+    padding-top: 5px;
   }
   .header__lang {
     font-size: 12px;

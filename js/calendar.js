@@ -34,13 +34,14 @@ let start, end;
 let countClicks = 0;
 calendarItem.forEach((item) => {
   item.addEventListener("click", (e) => {
-    /* Превый клик - выбрать день начала аренды */
-    if (countClicks == 0) {
-      countClicks++;
-      const passed = e.target.closest(".passed");
+    const passed = e.target.closest(".passed");
+    /* Проверка на клик именно по тем дням, которые доступны */
+    if (passed) return;
+    else {
+      /* Превый клик - выбрать день начала аренды */
+      if (countClicks == 0) {
+        countClicks++;
 
-      if (passed) return;
-      else {
         calendarItem.forEach((item) => {
           item.classList.remove("plan");
           item.classList.remove("include");
@@ -49,33 +50,25 @@ calendarItem.forEach((item) => {
 
         item.classList.add("plan");
         calendarItem.forEach((item, index) => {
-          if (item.classList.contains("plan")) {
-            start = index + 1;
-            console.log("start=>", start);
-          }
+          if (item.classList.contains("plan")) start = index + 1;
         });
-      }
-    } else if (countClicks == 1) {
-      /* Второй клик - выбрать день окончания аренды */
-      item.classList.add("plan");
-      calendarItem.forEach((item, index) => {
-        if (item.classList.contains("plan")) {
-          end = index;
-          console.log("end=>", end);
-        }
-      });
-      /* Если точка старта > конца */
-      if (start > end) {
-        calendarItem.forEach((item) => {
-          item.classList.remove("plan");
+      } else if (countClicks == 1) {
+        /* Второй клик - выбрать день окончания аренды */
+
+        item.classList.add("plan");
+        calendarItem.forEach((item, index) => {
+          if (item.classList.contains("plan")) end = index;
         });
+        /* Если точка старта > конца */
+        if (start > end)
+          calendarItem.forEach((item) => item.classList.remove("plan"));
+
+        elems
+          .slice(start, end - elems.length)
+          .forEach((item) => item.classList.add("include"));
+
+        countClicks = 0;
       }
-
-      elems.slice(start, end - elems.length).forEach((item) => {
-        item.classList.add("include");
-      });
-
-      countClicks = 0;
     }
   });
 });
