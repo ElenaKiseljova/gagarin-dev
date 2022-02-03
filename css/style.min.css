@@ -1,3 +1,6 @@
+:root {
+  --app-height: 100%;
+}
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -1845,7 +1848,7 @@ body.clear-bg::before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: var(--app-height);
   -webkit-transition: 0.7s linear;
   -o-transition: 0.7s linear;
   transition: 0.7s linear;
