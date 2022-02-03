@@ -1824,8 +1824,8 @@ body.clear-bg::before {
 }
 .basket__wrapper {
   height: 100vh;
-  max-width: 375px;
-  margin-right: 0;
+  width: 375px;
+
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1842,6 +1842,9 @@ body.clear-bg::before {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
+  margin-left: auto;
+  background-color: #eaeaea;
+  position: relative;
 }
 .basket__top {
   display: -webkit-box;
@@ -1956,6 +1959,10 @@ body.clear-bg::before {
   border-top: 1px solid #333;
   padding: 20px;
   margin-top: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .basket__bottom a {
   color: #000;
