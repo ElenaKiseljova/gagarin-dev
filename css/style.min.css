@@ -1808,7 +1808,7 @@ body.clear-bg::before {
   top: 0;
   right: 0;
   width: 100%;
-  height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .basket-btn {
@@ -1845,7 +1845,7 @@ body.clear-bg::before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; */
-  height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
   display: grid;
   grid-template-rows: auto 1fr auto;
   -webkit-transition: 0.7s linear;
