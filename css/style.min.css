@@ -1826,7 +1826,7 @@ body.clear-bg::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   width: 375px;
 
   margin-left: auto;
