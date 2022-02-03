@@ -1,6 +1,6 @@
 animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
 animateFadeOutBottom(".intro__inner", ".intro__inner *");
-animateFadeOutBottom(".products__grid", ".products__item");
+animateFadeOutBottom(".products__grid", ".products__grid > *");
 animateFadeOutBottom(".filter__left-box", ".filter__left-box li ");
 animateFadeOutBottom(".about__title", ".about__title span");
 animateFadeOutBottom(".list", ".list__item");
