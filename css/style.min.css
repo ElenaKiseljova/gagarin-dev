@@ -1811,7 +1811,7 @@ body.clear-bg::before {
   top: 0;
   right: 0;
   width: 100%;
-  height: -webkit-fill-available;
+  height: var(--app-height);
   background-color: rgba(0, 0, 0, 0.8);
 }
 .basket-btn {

@@ -38,3 +38,10 @@ basket.addEventListener("click", (event) => {
     document.body.classList.remove("active");
   } else return;
 });
+
+const appHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+window.addEventListener("resize", appHeight);
+appHeight();
