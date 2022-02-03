@@ -47,7 +47,17 @@ const validate = {
     return valid;
   },
 };
-
+window.formReset = function () {
+  const spans = form.querySelectorAll(".input-placeholder");
+  const inputs = form.querySelectorAll(".message__input");
+  spans.forEach((item) => {
+    item.classList.remove("active");
+  });
+  inputs.forEach((item) => {
+    item.textContent = "";
+    item.value = "";
+  });
+};
 if (form) {
   const inpust = form.querySelectorAll(".message__input");
   inpust.forEach((item) => {

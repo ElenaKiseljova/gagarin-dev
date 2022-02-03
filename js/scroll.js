@@ -1,7 +1,10 @@
 (function ($) {
   $(window).scroll(function () {
     const footer = document.querySelector(".footer").offsetHeight;
-    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+    if (
+      $(window).scrollTop() >
+      $(document).height() - $(window).height() - 200
+    ) {
       document.querySelector(
         ".shop__bag"
       ).style.transform = `translateY(${-footer}px)`;
@@ -9,4 +12,4 @@
       document.querySelector(".shop__bag").style.transform = `translateY(0)`;
     }
   });
-})(jQuery)
+})(jQuery);

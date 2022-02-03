@@ -4,7 +4,7 @@ gsap.config({
 gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
 const defs = {
-  duration: 0,
+  duration: 0.01,
 };
 const initAllScrollTriggers = (init) => {
   const animations = ScrollTrigger.getAll().filter((el) => !el.pin);
