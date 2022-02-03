@@ -1954,7 +1954,7 @@ body.clear-bg::before {
   margin: auto 0;
   width: 80%;
 }
-.basket__center .products__item-image .products__del {
+.products__del {
   position: absolute;
   cursor: pointer;
   margin: 0;
