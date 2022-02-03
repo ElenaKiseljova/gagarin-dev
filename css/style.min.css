@@ -1845,8 +1845,7 @@ body.clear-bg::before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: -webkit-fill-available;
-
+  height: 100%;
   -webkit-transition: 0.7s linear;
   -o-transition: 0.7s linear;
   transition: 0.7s linear;
