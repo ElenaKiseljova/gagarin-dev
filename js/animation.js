@@ -4,14 +4,9 @@ gsap.config({
 gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
 const defs = {
-  duration: 0.01,
+  duration: 0.5,
 };
-const initAllScrollTriggers = (init) => {
-  const animations = ScrollTrigger.getAll().filter((el) => !el.pin);
-  if (init) {
-    animations.forEach((el) => el.animation.restart());
-  }
-};
+
 const scrollTriggerInstance = (el, animation) => {
   return ScrollTrigger.create({
     animation,
@@ -103,45 +98,6 @@ const animateOnScroll = (container, el, el2) => {
       gsap.to(container, { clearProps: "all" });
       gsap.set(items, { opacity: 1 });
     },
-  });
-};
-const animateRocket = (el, item) => {
-  const tl = gsap.timeline(defs);
-  tl.to(item, {
-    xPercent: 0,
-    yPercent: 0,
-    ease: "expo.out",
-  });
-
-  scrollTriggerInstance(el, tl);
-  return tl;
-};
-
-const animateLogo = (el) => {
-  const items = Array.from(el.children).filter((el) =>
-    el.getAttribute("attributeName").includes("lt")
-  );
-
-  const getRandomCoords = () => {
-    const posX = Math.floor(Math.random() * 45);
-    const posY = Math.floor(Math.random() * 45);
-    return { x: posX, y: posY };
-  };
-
-  return items.map((el) => {
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
-    tl.repeatDelay(0);
-
-    for (let i = 0; i < 30; i++) {
-      tl.to(el, {
-        xPercent: getRandomCoords().x,
-        yPercent: getRandomCoords().y,
-        ease: "power1.inOut",
-        duration: 1,
-      });
-    }
-
-    return tl;
   });
 };
 

@@ -7,8 +7,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"
     />
-
+    <script src="js/libs/gsap.js"></script>
+    <script src="js/libs/gsapPlugins.js"></script>
+    <script src="js/animation.js"></script>
     <link rel="stylesheet" href="css/style.min.css" />
+
     <title>Gagarin</title>
   </head>
 
@@ -642,31 +645,31 @@
           </div>
           <div class="products__item">
             <span class="products__item-name">Canon EOS 5D Mark IV body</span>
+            <button class="products__del">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  y1="-0.5"
+                  x2="22.1269"
+                  y2="-0.5"
+                  transform="matrix(0.722639 0.691226 -0.722639 0.691226 0.010498 1.20532)"
+                  stroke="#0A0A0A"
+                />
+                <line
+                  y1="-0.5"
+                  x2="22.1269"
+                  y2="-0.5"
+                  transform="matrix(-0.722639 0.691226 -0.722639 -0.691226 15.9895 0.5)"
+                  stroke="#0A0A0A"
+                />
+              </svg>
+            </button>
             <a href="#" class="products__item-image">
-              <button class="products__del">
-                <svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 17 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    y1="-0.5"
-                    x2="22.1269"
-                    y2="-0.5"
-                    transform="matrix(0.722639 0.691226 -0.722639 0.691226 0.010498 1.20532)"
-                    stroke="#0A0A0A"
-                  />
-                  <line
-                    y1="-0.5"
-                    x2="22.1269"
-                    y2="-0.5"
-                    transform="matrix(-0.722639 0.691226 -0.722639 -0.691226 15.9895 0.5)"
-                    stroke="#0A0A0A"
-                  />
-                </svg>
-              </button>
               <img src="img/image-1.png" alt="image" />
               <span class="products__item-info"
                 >17 февраля - 21 февраля, 1800 uah</span
@@ -784,9 +787,6 @@
     </div>
 
     <!-- GSAP -->
-    <script src="js/libs/gsap.js"></script>
-    <script src="js/libs/gsapPlugins.js"></script>
-    <script src="js/animation.js"></script>
     <script src="js/animation-pages/index.js"></script>
     <!-- Styles -->
     <script src="js/basket.js"></script>
