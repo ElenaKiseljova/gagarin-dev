@@ -28,47 +28,51 @@ calendarClose.addEventListener("click", () => {
   document.body.classList.remove("active");
 });
 
-const calendarItem = document.querySelectorAll(".calendar__item");
-const elems = [...document.querySelectorAll(".calendar__item")];
-let start, end;
-let countClicks = 0;
-calendarItem.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    const passed = e.target.closest(".passed");
-    /* Проверка на клик именно по тем дням, которые доступны */
-    if (passed) return;
-    else {
-      /* Превый клик - выбрать день начала аренды */
-      if (countClicks == 0) {
-        countClicks++;
+window.frontCalendarItemsActivate = () => {
+  const calendarItem = document.querySelectorAll(".calendar__item");
+  const elems = [...document.querySelectorAll(".calendar__item")];
+  let start, end;
+  let countClicks = 0;
+  calendarItem.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      const passed = e.target.closest(".passed");
+      /* Проверка на клик именно по тем дням, которые доступны */
+      if (passed) return;
+      else {
+        /* Превый клик - выбрать день начала аренды */
+        if (countClicks == 0) {
+          countClicks++;
 
-        calendarItem.forEach((item) => {
-          item.classList.remove("plan");
-          item.classList.remove("include");
-          item.classList.remove("a");
-        });
+          calendarItem.forEach((item) => {
+            item.classList.remove("plan");
+            item.classList.remove("include");
+            item.classList.remove("a");
+          });
 
-        item.classList.add("plan");
-        calendarItem.forEach((item, index) => {
-          if (item.classList.contains("plan")) start = index + 1;
-        });
-      } else if (countClicks == 1) {
-        /* Второй клик - выбрать день окончания аренды */
+          item.classList.add("plan");
+          calendarItem.forEach((item, index) => {
+            if (item.classList.contains("plan")) start = index + 1;
+          });
+        } else if (countClicks == 1) {
+          /* Второй клик - выбрать день окончания аренды */
 
-        item.classList.add("plan");
-        calendarItem.forEach((item, index) => {
-          if (item.classList.contains("plan")) end = index;
-        });
-        /* Если точка старта > конца */
-        if (start > end)
-          calendarItem.forEach((item) => item.classList.remove("plan"));
+          item.classList.add("plan");
+          calendarItem.forEach((item, index) => {
+            if (item.classList.contains("plan")) end = index;
+          });
+          /* Если точка старта > конца */
+          if (start > end)
+            calendarItem.forEach((item) => item.classList.remove("plan"));
 
-        elems
-          .slice(start, end - elems.length)
-          .forEach((item) => item.classList.add("include"));
+          elems
+            .slice(start, end - elems.length)
+            .forEach((item) => item.classList.add("include"));
 
-        countClicks = 0;
+          countClicks = 0;
+        }
       }
-    }
+    });
   });
-});
+};
+
+window.frontCalendarItemsActivate();
