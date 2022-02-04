@@ -4430,3 +4430,6 @@ body.white-bg .basket-btn::before,
 .mySwiper .slider__item {
   cursor: grab;
 }
+.fix-nav__links .basket-btn {
+  height: auto;
+}
