@@ -3,11 +3,7 @@ const calendarClose = document.querySelector(".calendar__close");
 const calendarBtn = document.querySelector(".btn-calendar-open");
 /* При загрузке страницы получаем ширину дока */
 
-let deviceWidthDefault = window.innerWidth && document.documentElement.clientWidth ?
-  Math.min(window.innerWidth, document.documentElement.clientWidth) :
-  window.innerWidth ||
-  document.documentElement.clientWidth ||
-  document.getElementsByTagName('body')[0].clientWidth;
+let deviceWidthDefault = window.innerWidth;
 
 checkWidth(deviceWidthDefault);
 
