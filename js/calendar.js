@@ -2,12 +2,12 @@ const calendar = document.querySelector(".product-about__calendar");
 const calendarClose = document.querySelector(".calendar__close");
 const calendarBtn = document.querySelector(".btn-calendar-open");
 /* При загрузке страницы получаем ширину дока */
-let documentWidth = document.querySelector("body").clientWidth;
+let documentWidth = window.innerWidth;
 checkWidth(documentWidth);
 
 function checkWidth(param) {
   calendarBtn?.addEventListener("click", (e) => {
-    if (param < 1439) {
+    if (param < 1440) {
       e.preventDefault();
       calendar.classList.add("active");
       document.body.classList.add("active");
