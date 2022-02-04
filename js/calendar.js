@@ -13,7 +13,7 @@ checkWidth(deviceWidthDefault);
 
 function checkWidth(param) {
   calendarBtn?.addEventListener("click", (e) => {
-    if (param < 1440) {
+    if (param < 1439) {
       e.preventDefault();
       calendar.classList.add("active");
       document.body.classList.add("active");
