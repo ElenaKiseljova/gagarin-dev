@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"
     />
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
     <script src="js/libs/gsap.js"></script>
     <script src="js/libs/gsapPlugins.js"></script>
     <script src="js/animation.js"></script>
@@ -40,9 +41,6 @@
               </li>
               <li class="active">
                 <a href="privacy.html">условия проката</a>
-              </li>
-              <li class="hide">
-                <button class="header__lang">Русский</button>
               </li>
             </ul>
             <a href="index.html" class="header__logo dark">
@@ -85,35 +83,60 @@
           <div class="equipment-rental__right">
             <form class="message__form form dark">
               <div class="input__wrapp">
-                <input type="text" name="name" class="_req message__input" />
+                <input
+                  type="text"
+                  name="name"
+                  class="_req message__input"
+                  autocomplete="no"
+                />
                 <span class="input-placeholder p1 p1-light">Ваше имя</span>
                 <span class="input-placeholder-error"
                   >The field is required.</span
                 >
               </div>
               <div class="input__wrapp">
-                <input type="text" name="city" class="_req message__input" />
+                <input
+                  type="text"
+                  name="city"
+                  class="_req message__input"
+                  autocomplete="no"
+                />
                 <span class="input-placeholder p1 p1-light">Ваш город</span>
                 <span class="input-placeholder-error"
                   >The field is required.</span
                 >
               </div>
               <div class="input__wrapp">
-                <input type="tel" name="phone" class="_req message__input" />
+                <input
+                  type="tel"
+                  name="phone"
+                  class="_req message__input"
+                  autocomplete="no"
+                />
                 <span class="input-placeholder p1 p1-light">Ваш телефон</span>
                 <span class="input-placeholder-error"
                   >The field is required.</span
                 >
               </div>
               <div class="input__wrapp">
-                <input type="email" name="email" class="_req message__input" />
+                <input
+                  type="email"
+                  name="email"
+                  class="_req message__input"
+                  autocomplete="off"
+                />
                 <span class="input-placeholder p1 p1-light">Ваш e-mail</span>
                 <span class="input-placeholder-error"
                   >The field is required.</span
                 >
               </div>
               <div class="input__wrapp">
-                <input type="text" name="name" class="_req message__input" />
+                <input
+                  type="text"
+                  name="name"
+                  class="_req message__input"
+                  autocomplete="no"
+                />
                 <span class="input-placeholder p1 p1-light"
                   >ваше сообщение</span
                 >
@@ -317,7 +340,6 @@
       <div class="fix-nav --dark">
         <div class="fix-nav__content">
           <div class="fix-nav__head">
-            <button class="header__lang">Русский</button>
             <a href="/" class="header__logo nuxt-link-active"
               ><img
                 src="img/logo-black.svg"

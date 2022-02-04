@@ -19,5 +19,12 @@ buttons.forEach((item) => {
       item.className = key.dataset.class;
     });
     item.classList.add("btn__view-mode--action");
+    //Переопределение анимации
+    animateFadeOutBottom(".about__title", ".about__title span");
+    animateFadeOutBottom(".about__content", ".about__content p");
+    animateFadeOutBottom(".about__list", ".about__list *");
+    animateFadeOutBottomS(".equipment-rental", ".equipment-rental__left *");
+    animateOpacity(".statistics__box", ".statistics__item-wrapper");
+    animateFadeOutBottomS(".message__form", ".message__form > *");
   });
 });

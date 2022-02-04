@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  scroll-behavior: smooth;
 }
 main {
   display: block;
@@ -738,8 +739,10 @@ body.clear-bg::before {
 .filter__right-box {
   position: relative;
 }
+
 .filter__right-box #search {
   padding-right: 16px;
+  cursor: pointer;
 }
 .filter__btn {
   padding: 0;
@@ -1729,18 +1732,7 @@ body.clear-bg::before {
   color: #000;
   position: relative;
 }
-.select__selected::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -15px;
-  width: 8px;
-  height: 8px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: url("../img/selected.svg") no-repeat center center/cover;
-}
+
 .select__dropdown {
   display: none;
 }
@@ -2102,7 +2094,7 @@ body.clear-bg::before {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-end;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 80px;
   flex: 0 0 80px;
@@ -2920,6 +2912,10 @@ body.clear-bg::before {
   .btn-more {
     margin: 37px auto 120px;
   }
+  .header__logo {
+    left: 20px;
+    transform: translateX(0);
+  }
   .header__logo img {
     width: 102px;
     height: 68px;
@@ -3340,6 +3336,7 @@ body.clear-bg::before {
     display: none;
   }
   .filter__btn {
+    display: flex;
     white-space: nowrap;
     font-size: 14px;
   }
@@ -4402,4 +4399,34 @@ button.swiper-pagination-bullet {
 }
 .social__item.social__item--dark.--without-border[data-hover="youtube.com"]::before {
   content: none;
+}
+.basket-btn {
+  position: relative;
+  height: 20px;
+}
+.basket-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+
+  height: 0.2px;
+
+  transition: 0.25s ease;
+}
+body .basket-btn::before {
+  background-color: #fff;
+}
+body.white-bg .basket-btn::before,
+.fix-nav__link.basket-btn::before {
+  background-color: #000;
+}
+
+.basket-btn:hover::before {
+  width: 100%;
+  overflow: visible;
+}
+.mySwiper .slider__item {
+  cursor: grab;
 }
