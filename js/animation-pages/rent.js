@@ -1,3 +1,2 @@
-animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
-animateFadeOutBottom(".message__form", ".input__wrapp");
-animateFadeOutBottom(".btn", ".btn");
+animateFadeOutBottomS(".equipment-rental", ".equipment-rental__left *");
+animateFadeOutBottomS(".message__form", ".message__form > *");

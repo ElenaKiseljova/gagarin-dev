@@ -53,6 +53,17 @@ const animateFadeOutBottom = (el, items) => {
   scrollTriggerInstance(el, tl);
   return tl;
 };
+const animateFadeOutBottomS = (el, items) => {
+  const tl = gsap.timeline({ duration: 0.2 });
+  gsap.set(items, { opacity: 0 });
+  tl.fromTo(
+    items,
+    { yPercent: 30, opacity: 0 },
+    { yPercent: 0, opacity: 1, stagger: 0.1 }
+  );
+  scrollTriggerInstance(el, tl);
+  return tl;
+};
 const animateFadeOutRt = (el, items) => {
   const tl = gsap.timeline(defs);
   gsap.set(items, { opacity: 0, xPercent: 30 });

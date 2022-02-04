@@ -4,10 +4,10 @@ animateFadeOutBottom(".filter__left-box", ".filter__left-box li ");
 animateFadeOutBottom(".about__title", ".about__title span");
 animateFadeOutBottom(".list", ".list__item");
 animateOpacity(".statistics__box", ".statistics__item-wrapper");
-animateFadeOutBottom(".message__form", ".input__wrapp");
-animateFadeOutBottom(".btn-group", ".btn");
+animateFadeOutBottomS(".message__form", ".message__form > *");
+
 animateFadeOutBottom(".about__content", ".about__content p");
-animateFadeOutBottom(".equipment-rental", ".equipment-rental__left *");
+animateFadeOutBottomS(".equipment-rental", ".equipment-rental__left *");
 animateFadeOutBottom(".about__list", ".about__list *");
 
 if (document.body.offsetWidth > 768) {
