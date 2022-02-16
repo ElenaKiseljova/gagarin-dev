@@ -1706,9 +1706,6 @@ body.clear-bg::before {
   border-radius: 50%;
 }
 .calendar__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-
   display: none;
 }
 .calendar__time {
