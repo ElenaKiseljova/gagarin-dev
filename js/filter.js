@@ -10,3 +10,32 @@ filterBtns.forEach((item) => {
     }
   });
 });
+
+const search = document.getElementById("search");
+const clearField = document.querySelector(".filter__btn-clear");
+
+clearField.addEventListener("click", (e) => {
+  search.value = "";
+  clearFieldBlock();
+});
+search.addEventListener("focus", () => {
+  search.classList.add("focus");
+});
+search.addEventListener("input", (e) => {
+  if (search.value.length == 0) {
+    clearField.classList.remove("active");
+  } else {
+    clearField.classList.add("active");
+  }
+});
+search.addEventListener("blur", (e) => {
+  if (search.value == "" || !search.value.trim()) {
+    clearFieldBlock();
+  } else return;
+});
+
+function clearFieldBlock() {
+  search.classList.remove("focus");
+  clearField.classList.remove("active");
+  search.value = "";
+}

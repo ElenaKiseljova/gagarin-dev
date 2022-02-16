@@ -25,7 +25,7 @@
               <a href="products.html">товары</a>
             </li>
             <li>
-              <a href="#">гагарин шоу</a>
+              <a href="#"> шоу</a>
             </li>
             <li>
               <a href="privacy.html">условия проката</a>
@@ -37,6 +37,9 @@
           <ul>
             <li>
               <a href="#form" class="contact-btn">Контакты</a>
+            </li>
+            <li>
+              <a href="https://gagarin.news/" class="contact-btn">Новости</a>
             </li>
 
             <li>
@@ -133,8 +136,11 @@
                 name="search"
                 placeholder="Поиск"
                 autocomplete="off"
-                class="filter__input"
+                class="filter__input "
               />
+              <button type="button" class="filter__btn-clear">
+                <img src="img/close.svg" alt="" />
+              </button>
               <button type="submit" class="filter__btn-submit">
                 <img src="img/search.svg" alt="" class="filter__search-img" />
               </button>
@@ -218,7 +224,9 @@
     </section>
     <section class="products">
       <div class="products__grid">
-        <p class="products__no-res">No results were found for your search</p>
+        <div class="products__w">
+          <p class="products__no-res">No results were found for your search</p>
+        </div>
         <!-- <a href="product.html" class="products__item">
           <div class="products__item-image">
             <img src="img/image-1.png" alt="image" />
@@ -653,7 +661,8 @@
                 href="index.html"
                 class="fix-nav__link --big nuxt-link-exact-active nuxt-link-active"
                 aria-current="page"
-                >Гагарин шоу</a
+              >
+                шоу</a
               >
               <a href="privacy.html" class="fix-nav__link --big"
                 >Условия проката</a
@@ -665,6 +674,12 @@
               <a href="#form" class="fix-nav__link --small contact-btn"
                 >Контакты</a
               >
+              <a
+                href="http://gagarin.news/"
+                class="fix-nav__link --small contact-btn"
+                >Новости</a
+              >
+
               <button href="#" class="fix-nav__link --small basket-btn">
                 Корзина
               </button>

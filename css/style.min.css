@@ -681,7 +681,7 @@ body.clear-bg::before {
   transition: 0.3s linear;
   background-color: transparent;
 }
-.filter__input:focus {
+.filter__input.focus {
   outline: 0;
   width: 305px;
   margin-right: 16px;
@@ -820,9 +820,31 @@ body.clear-bg::before {
   border: none;
   background-color: transparent;
 }
-.filter__input:focus + .filter__btn-submit {
+.filter__input.focus ~ .filter__btn-submit {
   opacity: 1;
   pointer-events: visible;
+}
+.filter__btn-clear {
+  opacity: 0;
+  visibility: hidden;
+  width: 10px;
+  height: 10px;
+  border: none;
+  font-size: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 50px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.filter__btn-clear img {
+  width: 10px;
+  height: 10px;
+}
+.filter__btn-clear.active {
+  opacity: 1;
+  visibility: visible;
 }
 .products {
   padding: 0 24px;
@@ -1631,7 +1653,7 @@ body.clear-bg::before {
 }
 .calendar__center {
   padding: 48px 62px 56px 62px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
 }
 .calendar__list {
   display: grid;
@@ -1686,7 +1708,8 @@ body.clear-bg::before {
 .calendar__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+
+  display: none;
 }
 .calendar__time {
   display: -webkit-box;
@@ -2007,7 +2030,11 @@ body.clear-bg::before {
   font-size: 16px;
   line-height: 18px;
   color: #fff;
+
   margin-bottom: 80px;
+}
+.privacy__descr p {
+  text-align: justify;
 }
 .privacy__list {
   margin-bottom: 144px;
@@ -2922,15 +2949,7 @@ body.clear-bg::before {
     height: 68px;
     position: relative;
   }
-  .header__logo::before {
-    content: "";
-    position: absolute;
-    top: -13px;
-    right: 0;
-    width: 40.8px;
-    height: 40.8px;
-    background: url(../img/santa-claus-hat.png) no-repeat center/cover;
-  }
+
   .nav ul {
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
@@ -3347,7 +3366,7 @@ body.clear-bg::before {
   .filter__input {
     font-size: 12px;
   }
-  .filter__input:focus {
+  .filter__input.focus {
     width: 200px;
   }
   .filter__right {
@@ -4379,17 +4398,17 @@ button.swiper-pagination-bullet {
     max-width: 800px;
     padding-right: 25px;
   }
-  .filter__input:focus {
+  .filter__input.focus {
     width: 200px;
   }
 }
 @media (max-width: 1095px) {
-  .filter__input:focus {
+  .filter__input.focus {
     width: 130px;
   }
 }
 @media (max-width: 1023px) {
-  .filter__input:focus {
+  .filter__input.focus {
     width: 300px;
   }
 }
@@ -4433,6 +4452,9 @@ body.white-bg .basket-btn::before,
 }
 .fix-nav__links .basket-btn {
   height: auto;
+}
+.products__w {
+  width: 100vw;
 }
 .products__no-res {
   grid-column: 1/-1;
